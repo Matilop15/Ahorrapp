@@ -1,0 +1,14 @@
+[
+  {
+    "name": "fun",
+    "path": "/fun",
+    "component": "C:\\\\Users\\\\3960\\\\GitHub\\\\Ahorrapp\\\\Front-end\\\\pages\\\\fun.vue",
+    "chunkName": "pages/fun"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\3960\\\\GitHub\\\\Ahorrapp\\\\Front-end\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]

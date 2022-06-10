@@ -1,0 +1,23 @@
+{
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  },
+  "PhoneMenu": {
+    "description": "Auto imported from components/PhoneMenu.vue"
+  },
+  "PhoneNav": {
+    "description": "Auto imported from components/PhoneNav.vue"
+  },
+  "PhoneNavButton": {
+    "description": "Auto imported from components/PhoneNavButton.vue"
+  },
+  "SearchBar": {
+    "description": "Auto imported from components/SearchBar.vue"
+  },
+  "Test": {
+    "description": "Auto imported from components/test.vue"
+  }
+}
