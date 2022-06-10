@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+#Paste this code in .git/hooks/pre-push and convert to executable file
+
+branch_blocked=master
+
+if grep -q "$branch_blocked"; then
+     echo "Branch '$branch_blocked' is blocked by yourself." >&2
+     exit 1
+fi
