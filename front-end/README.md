@@ -17,7 +17,7 @@ $ yarn start
 $ yarn generate
 
 # storybook server
-$ yarn nuxt storybook
+$ yarn storybook
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
