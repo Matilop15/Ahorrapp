@@ -220,3 +220,8 @@ sw.*
 
 # Vim swap files
 *.swp
+
+#storybook
+
+.nuxt-storybook
+storybook-static
