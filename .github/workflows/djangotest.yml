@@ -28,10 +28,9 @@ jobs:
         python manage.py test
      
     - name: Install Python dependencies
-      run: pip install --upgrade autopep8 flake8
+      run: pip install --upgrade flake8
 
-    - name: Run flake8 and autopep8
+    - name: Run flake8
       uses: wearerequired/lint-action@v2.0.0
       with:
-        autopep8: true
         flake8: true
