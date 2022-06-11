@@ -26,8 +26,9 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
-            - name: Install Python dependencies
-        run: pip install black flake8
+     
+    - name: Install Python dependencies
+      run: pip install black flake8
 
     - name: Run indentation
       uses: wearerequired/lint-action@v1
