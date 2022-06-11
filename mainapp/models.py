@@ -14,4 +14,3 @@ class Product(models.Model):
     img_url = models.URLField(blank=True, null=True)
     product_url = models.URLField(blank=True)
     update_date = models.DateTimeField()
-
