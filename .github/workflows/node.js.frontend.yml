@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 14
           cache: 'npm'
-
+          cache-dependency-path: front-end/yarn.lock
       # ESLint and Prettier must be in `package.json`
       - name: Install Node.js dependencies
         run: npm ci
