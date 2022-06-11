@@ -1,4 +1,4 @@
-name: Django CI
+name: Django back-end branch CI
 
 on:
   push:
