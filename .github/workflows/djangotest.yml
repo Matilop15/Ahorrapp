@@ -7,11 +7,11 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.7, 3.8, 3.9]
+        python-version: [3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v3
@@ -26,3 +26,11 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
+            - name: Install Python dependencies
+        run: pip install black flake8
+
+    - name: Run indentation
+      uses: wearerequired/lint-action@v1
+      with:
+        black: true
+        flake8: true
