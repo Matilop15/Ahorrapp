@@ -34,4 +34,4 @@ jobs:
       - name: Linting Action 
         uses: ryanclark/lint-action@v1.15.0
         with:
-            ox: true
+            xo: true
