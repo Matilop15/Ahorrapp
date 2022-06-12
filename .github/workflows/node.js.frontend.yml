@@ -30,7 +30,7 @@ jobs:
         run: npm install
 
       - name: install xo
-        run: npm install ox 
+        run: npm install xo 
       - name: Linting Action 
         uses: ryanclark/lint-action@v1.15.0
         with:
