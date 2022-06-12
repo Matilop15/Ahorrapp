@@ -29,7 +29,10 @@ jobs:
       - name: Install Node.js dependencies
         run: npm install
 
-      - name: Linting Action
+      - name: install eslint
+        run: npm install eslint -d 
+      - name: Linting Action 
         uses: ryanclark/lint-action@v1.15.0
         with:
+          eslint: true
           prettier: xo
