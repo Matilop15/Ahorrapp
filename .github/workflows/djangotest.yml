@@ -1,4 +1,4 @@
-name: Django dev branch CI
+name: Django test and linting in dev branch CI
 
 on:
   push:
