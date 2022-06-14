@@ -6,17 +6,17 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-        steps:
-    - uses: actions/checkout@v3
+        
+    steps:
+     - uses: actions/checkout@v3
     
-    - name: ssh deploy
-      uses: easingthemes/ssh-deploy@v2.2.11
+     - name: ssh deploy
+       uses: easingthemes/ssh-deploy@v2.2.11
 
-      env:
+       env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzvO"
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ./
-          
