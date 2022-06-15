@@ -1,9 +1,9 @@
 name: Node deploy CI
 
 on: 
-   branches:
-     fronted:
-      [push]
+   push:
+     branches:
+        - fronted
 
 jobs:
   build:
