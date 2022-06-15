@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 span {
-  @apply w-full flex bg-red-200 items-center rounded-md;
+  @apply w-full flex bg-red-200 items-center rounded-md shadow-sm;
 }
 i {
   @apply p-2;

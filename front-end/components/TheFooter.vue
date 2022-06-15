@@ -1,9 +1,7 @@
 <template>
   <footer>
-    <NuxtLink to="/about">
-      <span>
+    <NuxtLink to="/nosotros">
         Sobre Nosotros
-      </span>
     </NuxtLink>
   </footer>
 </template>
@@ -17,6 +15,6 @@ export default {
 
 <style scoped>
 footer {
-  @apply mb-12;
+  @apply mb-14;
 }
 </style>

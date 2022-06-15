@@ -1,6 +1,5 @@
 <template>
   <main>
-    <TheHeader />
     <Nuxt />
     <PhoneNav />
     <TheFooter />
@@ -8,3 +7,8 @@
 </template>
 <script>
 </script>
+<style>
+body {
+  @apply bg-gray-50;
+}
+</style>

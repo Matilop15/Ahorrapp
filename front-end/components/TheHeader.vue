@@ -1,7 +1,8 @@
 <template>
   <header>
-    <SearchBar />
-    <Location />
+    <NuxtLink to="/">
+      <h1>Ahorrapp</h1>
+    </NuxtLink>
   </header>
 </template>
 

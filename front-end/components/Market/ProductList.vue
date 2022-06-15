@@ -1,74 +1,92 @@
 <template>
   <section>
-    <p v-if="$fetchState.pending">Cargando productos...</p>
-    <p v-else-if="$fetchState.error">A ocurrido un error :(</p>
-    <div v-else>
-      <template v-for="product in products">
-        <ProductCard :product="product" :key="product.id" />
-      </template>
-    </div>
+    <hr>
+    <h2>Productos:</h2>
+    <template v-for="product in products">
+      <MarketProductItem :product="product" :key="product.id" />
+    </template>
   </section>
 </template>
+
 <script>
+// /supermercado/id/productos  trae productos de ese super
 const sampleData = [
   {
     id: 1,
     name: "Arroz",
     picture: "https://picsum.photos/200",
     description: "1kg",
+    price: 156,
+    update_at: "21/7/22"
   },
   {
     id: 2,
     name: "Yerba",
     picture: "https://picsum.photos/200",
     description: "1kg",
+    price: 156,
+    update_at: "21/7/22"
   },
   {
     id: 3,
     name: "Fiambre",
     picture: "https://picsum.photos/200",
     description: "1kg",
+    price: 156,
+    update_at: "21/7/22"
   },
   {
     id: 4,
     name: "Yerba",
     picture: "https://picsum.photos/200",
     description: "1kg",
+    price: 156,
+    update_at: "21/7/22"
   },
   {
     id: 5,
     name: "Fiambre",
     picture: "https://picsum.photos/200",
     description: "1kg",
+    price: 156,
+    update_at: "21/7/22"
   },
   {
     id: 6,
     name: "Yerba",
     picture: "https://picsum.photos/200",
     description: "1kg",
+    price: 156,
+    update_at: "21/7/22"
   },
   {
     id: 7,
     name: "Fiambre",
     picture: "https://picsum.photos/200",
     description: "1kg",
+    price: 156,
+    update_at: "21/7/22"
   },
   {
     id: 8,
     name: "Yerba",
     picture: "https://picsum.photos/200",
     description: "1kg",
+    price: 156,
+    update_at: "21/7/22"
   },
   {
     id: 9,
     name: "Fiambre",
     picture: "https://picsum.photos/200",
     description: "1kg",
+    price: 156,
+    update_at: "21/7/22"
   }
 ];
 
 export default {
-  name: "ProductsList",
+  name: "MarketProductList",
   data() {
     return {
       products: [],
@@ -79,11 +97,13 @@ export default {
   },
 };
 </script>
+
 <style scoped>
-section {
-  @apply p-3;
+h2 {
+  @apply ml-3 text-lg font-bold;
 }
-div {
-  @apply w-full flex flex-wrap justify-between;
+
+hr {
+  @apply w-40 border-black rounded-md m-auto;
 }
 </style>
