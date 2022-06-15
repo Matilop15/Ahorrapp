@@ -35,7 +35,10 @@ export default {
     // Nuxt 2 only:
     // https://composition-api.nuxtjs.org/getting-started/setup#quick-start
     '@nuxtjs/composition-api/module',
-    '@pinia/nuxt'
+    // https://pinia.vuejs.org/
+    '@pinia/nuxt',
+    // https://vueuse.org/
+    '@vueuse/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

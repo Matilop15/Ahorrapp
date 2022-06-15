@@ -16,6 +16,8 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@pinia/nuxt": "^0.1.9",
     "@vue/runtime-dom": "^3.2.37",
+    "@vueuse/core": "^8.6.0",
+    "@vueuse/nuxt": "^8.6.0",
     "axios": "^0.27.2",
     "consola": "^2.15.3",
     "core-js": "^3.19.3",
