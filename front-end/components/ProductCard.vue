@@ -1,9 +1,9 @@
 <template>
   <article>
-    <img :src="product.picture">
+    <img :src="product.UrlImg">
     <div id="description">
       <div>
-        <h3>{{ product.name }}</h3>
+        <h3>{{ product.Name }} - {{ product.Brand }}</h3>
         <p>{{ product.description }}</p>
       </div>
       <button>

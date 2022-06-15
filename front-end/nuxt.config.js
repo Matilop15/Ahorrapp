@@ -32,7 +32,10 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
-    'nuxt-vite'
+    // Nuxt 2 only:
+    // https://composition-api.nuxtjs.org/getting-started/setup#quick-start
+    '@nuxtjs/composition-api/module',
+    '@pinia/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -58,11 +61,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {}
-      }
-    }
   }
 };
