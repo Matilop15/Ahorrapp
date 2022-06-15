@@ -1,13 +1,13 @@
 name: deploy BACKend CI
 
-#on: [push]
+on: [push]
 
 jobs:
   build:
 
-   #runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
         
-    steps:
+   steps:
      - uses: actions/checkout@v3
     
      - name: ssh deploy
@@ -19,4 +19,5 @@ jobs:
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST_SERVER_2 }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ./back-end/
+          TARGET: ./back-end
+          EXCLUDE: "/DjangoAPI/, /app/, /Ahorrapp Logo.png/, /manage.py/, /README.md/"
