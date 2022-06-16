@@ -30,13 +30,8 @@ jobs:
       - name: clean cache
         run: npm cache clean --force
       - name: Install Node.js dependencies
-        run: npm install
-
-      - name: install eslint
         run: |
-            npm install eslint
-            npm init @eslint/config
-      - name: Linting Action 
-        uses: ryanclark/lint-action@v1.15.0
-        with:
-           ESlint: True
+          npm install --save-dev husky lint-staged
+          npx husky install
+          npm set-script prepare "husky install"
+          npx husky add .husky/pre-commit "npx lint-staged"
