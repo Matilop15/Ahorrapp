@@ -34,5 +34,9 @@
     "@nuxtjs/tailwindcss": "^4.2.1",
     "nuxt-vite": "^0.3.5",
     "postcss": "^8.4.4"
+  },
+  "prettier" : {
+    "singleQuote": true,
+    "trailingComma": "none"
   }
 }
