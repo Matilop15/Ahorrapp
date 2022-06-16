@@ -10,7 +10,8 @@ export const useProductsSampleStore = defineStore('products_sample', {
         UrlImg: 'https://picsum.photos/200',
         description: '1kg',
         update_at: '12/7/22',
-        price: 100
+        price: 100,
+        market: 'Ta-ta'
       },
       {
         id: 2,
@@ -19,7 +20,8 @@ export const useProductsSampleStore = defineStore('products_sample', {
         UrlImg: 'https://picsum.photos/200',
         description: '1kg',
         update_at: '12/7/22',
-        price: 100
+        price: 100,
+        market: 'Disco'
       },
       {
         id: 3,
@@ -28,7 +30,8 @@ export const useProductsSampleStore = defineStore('products_sample', {
         UrlImg: 'https://picsum.photos/200',
         description: '1kg',
         update_at: '12/7/22',
-        price: 100
+        price: 100,
+        market: 'Geant'
       },
       {
         id: 4,
@@ -37,7 +40,8 @@ export const useProductsSampleStore = defineStore('products_sample', {
         UrlImg: 'https://picsum.photos/200',
         description: '1kg',
         update_at: '12/7/22',
-        price: 100
+        price: 100,
+        market: 'Los Paraisos'
       },
       {
         id: 5,
@@ -46,7 +50,8 @@ export const useProductsSampleStore = defineStore('products_sample', {
         UrlImg: 'https://picsum.photos/200',
         description: '1kg',
         update_at: '12/7/22',
-        price: 100
+        price: 100,
+        market: 'Mastilazo'
       },
       {
         id: 6,
@@ -55,7 +60,8 @@ export const useProductsSampleStore = defineStore('products_sample', {
         UrlImg: 'https://picsum.photos/200',
         description: '1kg',
         update_at: '12/7/22',
-        price: 100
+        price: 100,
+        market: 'Lo de pepe'
       },
       {
         id: 7,
@@ -64,7 +70,8 @@ export const useProductsSampleStore = defineStore('products_sample', {
         UrlImg: 'https://picsum.photos/200',
         description: '1kg',
         update_at: '12/7/22',
-        price: 100
+        price: 100,
+        market: 'Fiumba Market'
       },
       {
         id: 8,
@@ -73,7 +80,8 @@ export const useProductsSampleStore = defineStore('products_sample', {
         UrlImg: 'https://picsum.photos/200',
         description: '1kg',
         update_at: '12/7/22',
-        price: 100
+        price: 100,
+        market: 'a Market'
       },
       {
         id: 9,
@@ -82,7 +90,8 @@ export const useProductsSampleStore = defineStore('products_sample', {
         UrlImg: 'https://picsum.photos/200',
         description: '1kg',
         update_at: '12/7/22',
-        price: 100
+        price: 100,
+        market: 'coso Market'
       }
     ]
   })

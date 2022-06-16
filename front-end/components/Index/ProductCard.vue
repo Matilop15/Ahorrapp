@@ -1,6 +1,6 @@
 <template>
     <article>
-      <NuxtLink :to="`/productos/${product.Name}/`">
+      <NuxtLink :to="`/productos/${product.Name}-${product.id}/`">
         <img :src="product.UrlImg">
         <div id="description">
           <div>
