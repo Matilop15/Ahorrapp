@@ -35,3 +35,4 @@ jobs:
           npx husky install
           npm set-script prepare "husky install"
           npx husky add .husky/pre-commit "npx lint-staged"
+        working-directory: ./front-end/
