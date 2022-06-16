@@ -1,15 +1,18 @@
-name: Frontttt test
+name: Fronted test linters
 
 on:
   # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - frontend
+  # but only for the front branch
+ push:
+   branches:
+     - frontend
+ pull_request:
+  branches:
+     - frontend
 
 jobs:
   run-linters:
-    name: Run linters
+    name: Run linters in frontend
     runs-on: ubuntu-latest
 
     steps:
@@ -29,9 +32,9 @@ jobs:
       - name: Install Node.js dependencies
         run: npm install
 
-      - name: install xo
-        run: npm install xo 
+      - name: install eslint
+        run: npm install eslint
       - name: Linting Action 
-        #uses: ryanclark/lint-action@v1.15.0
-        #with:
-           # xo: true
+        uses: ryanclark/lint-action@v1.15.0
+        with:
+           ESlint: True
