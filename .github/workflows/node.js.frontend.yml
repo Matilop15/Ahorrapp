@@ -31,8 +31,12 @@ jobs:
         run: npm cache clean --force
       - name: Install Node.js dependencies
         run: |
-          npm install --save-dev husky lint-staged
-          npx husky install
-          npm set-script prepare "husky install"
-          npx husky add .husky/pre-commit "npx lint-staged"
+          npm install 
+          npm install prettier
         working-directory: ./front-end/
+      - name: Lint Action
+        uses: wearerequired/lint-action@v2.0.0
+        with:
+           prettier: true
+
+        
