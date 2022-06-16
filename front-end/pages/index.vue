@@ -4,7 +4,7 @@
       <SearchBar />
       <Location />
     </div>
-    <ProductList />
+    <IndexProductList />
   </section>
 </template>
 
