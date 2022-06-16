@@ -33,7 +33,9 @@ jobs:
         run: npm install
 
       - name: install eslint
-        run: npm install eslint
+        run: |
+            npm install eslint
+            npm init @eslint/config
       - name: Linting Action 
         uses: ryanclark/lint-action@v1.15.0
         with:
