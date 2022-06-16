@@ -39,7 +39,4 @@
     "singleQuote": true,
     "trailingComma": "none"
   }
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
-  }
 }
