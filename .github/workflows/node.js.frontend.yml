@@ -1,5 +1,6 @@
 name: Fronted test linters
-
+permissions:
+     actions: write
 on:
   # Trigger the workflow on push or pull request,
   # but only for the front branch
