@@ -1,8 +1,6 @@
 <template>
   <footer>
-    <NuxtLink to="/nosotros">
-        Sobre Nosotros
-    </NuxtLink>
+    Ahorrap 2022 ©
   </footer>
 </template>
 
