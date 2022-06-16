@@ -40,4 +40,3 @@ jobs:
            auto_fix: true
            prettier: true
            prettier_auto_fix: true
-        
