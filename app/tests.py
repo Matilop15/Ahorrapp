@@ -26,9 +26,3 @@ class ApiTestCase(TestCase):
         self.assertEqual(response.status_code, HTTPStatus(301))
         self.assertRedirects(response, '/api/product/', status_code=301,
                         target_status_code=200, fetch_redirect_response=True)
-
-    def test_login(self):
-        """"""
-        response = self.c.login(username='angel', password='angel')
-        self.assertTrue(response)
-        
