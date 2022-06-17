@@ -10,6 +10,7 @@ class Product(models.Model):
     Name = models.CharField(max_length=120)
     UrlImg = models.CharField(max_length=120)
     Brand = models.CharField(max_length=120)
+    Slug = models.SlugField(max_length=120)
 
 class SuperMarket(models.Model):
     """class SuperMarkets model"""
