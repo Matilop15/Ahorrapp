@@ -9,6 +9,7 @@ class SuperMarketSerializer(serializers.ModelSerializer):
         model = SuperMarket
         fields = ('SuperMarketId', 'Address', 'Name', 'Phone')
 
+
 class ProductSerializer(serializers.ModelSerializer):
     """class ProductSerializer"""
     class Meta:
@@ -16,9 +17,16 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = ('ProductId', 'UrlImg', 'Brand')
 
+
 class ProductMarketSerializer(serializers.ModelSerializer):
     """ProductMarketSerializer class"""
     class Meta:
         """class Meta"""
         model = ProductMarket
+<<<<<<< HEAD
         fields = ('ProductMarketId', 'SuperMarketId', 'ProductId', 'UpdateAt', 'ProductPrice')
+=======
+        fields = ('ProductMarketId', 'SuperMarketId', 'ProductId',
+                'ProductName', 'ProductPrice')
+                
+>>>>>>> 557daebebd98278cf0bfe29c7ed66bcd201f377f
