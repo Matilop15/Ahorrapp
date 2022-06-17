@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 # from rest_framework.parsers import JSONparser
 from rest_framework.response import Response
@@ -23,4 +22,19 @@ def product_api(request, id=0):
             products_serializer.save()
             return Response("Product added successfully")
         return Response("Failed to Add product")
-        
+
+@api_view()
+def product_market_api(request, id=0):
+    """ProductMarket api"""
+    if request.method == 'GET':
+        product_market = ProductMarket.objects.all()
+        product_market_serializer = ProductMarketSerializer(product_market, many=True)
+        return Response(product_market_serializer.data)
+
+@api_view()
+def super_markets_api(request, id=0):
+    """SuperMarket api"""
+    if request.method == 'GET':
+        super_markets = SuperMarkets.objects.all()
+        super_markets_serializer = SuperMarketsSerializer(super_markets, many=True)
+        return Response(super_markets_serializer.data)
