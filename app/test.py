@@ -7,6 +7,7 @@ from http import HTTPStatus
 # Models
 from django.contrib.auth.models import User
 
+
 class ApiTestCase(TestCase):
     """Test for Django Api"""
     def setUp(self):

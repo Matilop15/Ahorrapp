@@ -13,7 +13,7 @@ class Product(models.Model):
     Brand = models.CharField(max_length=120)
     Slug = models.SlugField(max_length=120)
 
-    
+
 class SuperMarkets(models.Model):
     """class SuperMarkets model"""
     SuperMarketId = models.AutoField(primary_key=True)
@@ -30,7 +30,7 @@ class ProductMarket(models.Model):
     ProductPrice = models.CharField(max_length=45)
     UpdateAt = models.DateTimeField(auto_now=True)
 
-    # def save(self, *args, **kwargs):
-        # """ On save, update timestamp """
-        # self.UpdateAt = timezone.now()
-        # return super(ProductMarket, self).save(*args, **kwargs)
+# def save(self, *args, **kwargs):
+# """ On save, update timestamp """
+# self.UpdateAt = timezone.now()
+# return super(ProductMarket, self).save(*args, **kwargs)

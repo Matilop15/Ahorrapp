@@ -4,15 +4,18 @@ from .serializers import ProductSerializer, ProductMarketSerializer, SuperMarket
 from .models import Product, ProductMarket, SuperMarket
 """ Defines views """
 
+
 class ProductViewSet(viewsets.ModelViewSet):
     """ Product View Set """
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
 
+
 class SuperMarketViewSet(viewsets.ModelViewSet):
     """ Super Market View Set """
     serializer_class = SuperMarketSerializer
     queryset = SuperMarket.objects.all()
+
 
 class ProductMarketViewSet(viewsets.ModelViewSet):
     """ Product Market View set """

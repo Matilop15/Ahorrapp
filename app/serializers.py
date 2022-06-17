@@ -23,10 +23,4 @@ class ProductMarketSerializer(serializers.ModelSerializer):
     class Meta:
         """class Meta"""
         model = ProductMarket
-<<<<<<< HEAD
         fields = ('ProductMarketId', 'SuperMarketId', 'ProductId', 'UpdateAt', 'ProductPrice')
-=======
-        fields = ('ProductMarketId', 'SuperMarketId', 'ProductId',
-                'ProductName', 'ProductPrice')
-                
->>>>>>> 557daebebd98278cf0bfe29c7ed66bcd201f377f
