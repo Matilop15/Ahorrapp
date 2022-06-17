@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from app.models import SuperMarket, Product, ProductMarket
+from app.models import ProductMarket, SuperMarket, Product
+""" serializers """
 
 
 class SuperMarketSerializer(serializers.ModelSerializer):
@@ -15,7 +16,7 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         """class Meta"""
         model = Product
-        fields = ('ProductId', 'UrlImg', 'Brand')
+        fields = ('ProductId', 'UrlImg', 'Brand', 'Slug', 'Name')
 
 
 class ProductMarketSerializer(serializers.ModelSerializer):
@@ -23,10 +24,5 @@ class ProductMarketSerializer(serializers.ModelSerializer):
     class Meta:
         """class Meta"""
         model = ProductMarket
-<<<<<<< HEAD
-        fields = ('ProductMarketId', 'SuperMarketId', 'ProductId', 'UpdateAt', 'ProductPrice')
-=======
-        fields = ('ProductMarketId', 'SuperMarketId', 'ProductId',
-                'ProductName', 'ProductPrice')
-                
->>>>>>> 557daebebd98278cf0bfe29c7ed66bcd201f377f
+        fields = ('ProductMarketId', 'SuperMarketId',
+                  'ProductId', 'UpdateAt', 'ProductPrice')

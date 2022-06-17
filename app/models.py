@@ -1,8 +1,6 @@
-from django.db import models
 from datetime import datetime
-from django.utils import timezone
-
-# Create your models here.
+from django.db import models
+""" module that defines database models """
 
 
 class Product(models.Model):
@@ -13,12 +11,8 @@ class Product(models.Model):
     Brand = models.CharField(max_length=120)
     Slug = models.SlugField(max_length=120)
 
-<<<<<<< HEAD
-class SuperMarket(models.Model):
-=======
 
-class SuperMarkets(models.Model):
->>>>>>> 557daebebd98278cf0bfe29c7ed66bcd201f377f
+class SuperMarket(models.Model):
     """class SuperMarkets model"""
     SuperMarketId = models.AutoField(primary_key=True)
     Name = models.CharField(max_length=120)
@@ -33,8 +27,3 @@ class ProductMarket(models.Model):
     ProductId = models.ForeignKey(Product, on_delete=models.CASCADE)
     ProductPrice = models.CharField(max_length=45)
     UpdateAt = models.DateTimeField(auto_now=True)
-
-    # def save(self, *args, **kwargs):
-        # """ On save, update timestamp """
-        # self.UpdateAt = timezone.now()
-        # return super(ProductMarket, self).save(*args, **kwargs)
