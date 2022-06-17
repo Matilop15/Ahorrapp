@@ -13,12 +13,8 @@ class Product(models.Model):
     Brand = models.CharField(max_length=120)
     Slug = models.SlugField(max_length=120)
 
-<<<<<<< HEAD
-class SuperMarket(models.Model):
-=======
-
+    
 class SuperMarkets(models.Model):
->>>>>>> 557daebebd98278cf0bfe29c7ed66bcd201f377f
     """class SuperMarkets model"""
     SuperMarketId = models.AutoField(primary_key=True)
     Name = models.CharField(max_length=120)
