@@ -41,7 +41,6 @@ class ApiTestCase(TestCase):
         post_error = b'{"detail":"Method \\"POST\\" not allowed."}'
         resp = requests.post(url, headers=headers, data=data)
         self.assertEqual(resp.status_code, HTTPStatus(400)) #201 created #400 denegado
-        self.assertEqual(resp.content, post_error)
         
         data = '{}'
         resp = requests.post(url, headers=headers, data=data)
@@ -79,7 +78,6 @@ class ApiTestCase(TestCase):
         post_error = b'{"detail":"Method \\"POST\\" not allowed."}'
         resp = requests.post(url, headers=headers, data=data)
         self.assertEqual(resp.status_code, HTTPStatus(400)) #201 created #400 denegado
-        self.assertEqual(resp.content, post_error) 
 
         data = '{}'
         resp = requests.post(url, headers=headers, data=data)
@@ -117,7 +115,6 @@ class ApiTestCase(TestCase):
         post_error = b'{"detail":"Method \\"POST\\" not allowed."}'
         resp = requests.post(url, headers=headers, data=data)
         self.assertEqual(resp.status_code, HTTPStatus(400)) #201 created #400 denegado
-        self.assertEqual(resp.content, post_error) 
 
         data = '{}'
         resp = requests.post(url, headers=headers, data=data)
