@@ -29,7 +29,8 @@ jobs:
     - name: Run server
       run: |
         python3 manage.py runserver
-      working-directory: ./Ahorrapp
+        tmux --v
+      working-directory: ./
     - name: Run Tests
       run: |
         python manage.py test
