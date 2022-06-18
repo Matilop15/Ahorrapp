@@ -18,4 +18,4 @@ jobs:
        - name: Django Coverage action
          uses: dc740/django-coveragepy-github-action@0.9
          with:
-             django-app: 'sample_app'
+             django-app: 'app'
