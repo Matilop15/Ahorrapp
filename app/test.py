@@ -32,7 +32,7 @@ class ApiTestCase(TestCase):
         #self.assertEqual(response.status_code, HTTPStatus(301))
         #self.assertRedirects(response, '/api/product/', status_code=301, target_status_code=200, fetch_redirect_response=True)
 
-    def test_Api_Supermarket(self):
+    def test_Api_Supermarkets(self):
         """All test for api/supermarkets/"""
         url = "http://localhost:8000/api/supermarkets/"
         headers = CaseInsensitiveDict()
