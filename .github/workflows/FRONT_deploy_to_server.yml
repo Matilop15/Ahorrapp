@@ -1,6 +1,4 @@
-deploy front
-
-name: Node deploy CI
+name: Front deploy CI
 
 on: 
    push:
