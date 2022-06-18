@@ -16,6 +16,6 @@ jobs:
        - name: Checkout action
          uses: actions/checkout@v3
        - name: Django Coverage action
-         uses: actions/python-django-coverage-gitHub-action@0.9
+         uses: dc740/django-coveragepy-github-action@0.9
          with:
              django-app: 'sample_app'
