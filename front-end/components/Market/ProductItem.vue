@@ -1,12 +1,12 @@
 <template>
   <article>
-    <img :src="product.picture">
+    <img :src="product.image_url">
     <ul>
       <li>{{ product.name }}</li>
-      <li>{{ product.description }}</li>
+      <li>{{ product.size }}</li>
       <li>$ {{ product.price }}</li>
     </ul>
-    <span>{{ product.update_at }}</span>
+    <span>{{ product.updatedAt }}</span>
   </article>
 </template>
 <script>

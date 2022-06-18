@@ -16,24 +16,38 @@
         />
       </svg>
     </i>
-    <input type="text" name="Search" id="search-bar" class="" />
+    <input type="text" name="Search" id="search-bar" @keyup="search($event.target.value)"/>
   </span>
 </template>
 
-<script lang="ts">
+<script>
+import { useProductsStore } from "../store/ProductsStore";
+import { mapState } from 'pinia'
+
 export default {
   name: "SearchBar",
+  computed: {
+    ...mapState(useProductsStore, ['search'])
+  },
+  setup() {
+    const productsStore = useProductsStore();
+  }
 };
 </script>
 
 <style scoped>
 span {
-  @apply w-full flex bg-red-200 items-center rounded-md shadow-sm;
+  @apply w-full flex bg-white items-center rounded-md shadow-md
 }
 i {
   @apply p-2;
 }
+
+svg {
+  @apply text-red-300;
+}
+
 #search-bar {
-  @apply bg-red-200 w-full h-10 text-lg rounded-md focus:outline-none;
+  @apply bg-white w-full h-10 text-lg rounded-md focus:outline-none;
 }
 </style>

@@ -1,19 +1,20 @@
 <template>
   <section>
-    <template v-for="product in products_sample">
-        <ProductItem :product="product" :key="product.id" />
+    <div v-for="product in products" :key="product.id">
+        <ProductItem :product="product" />
         <hr>
-    </template>
+    </div>
   </section>
 </template>
 <script>
-import { useProductsSampleStore } from "../../store/products_sample";
-import { mapState } from 'pinia'
-
+// /api/products/<product_id> todos los productos con el mismo id
 export default {
   name: "ProductList",
-  computed: {
-    ...mapState(useProductsSampleStore, ['products_sample'])
+  data: () => ({
+    products: []
+  }),
+  async fetch() {
+    this.products = await this.$http.$get('https://api.nuxtjs.dev/beers');
   }
 };
 </script>

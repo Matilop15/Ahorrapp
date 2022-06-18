@@ -1,8 +1,8 @@
 <template>
   <header>
-    <img :src="product.UrlImg">
-    <h1>{{ product.Name }} - {{product.Brand}}</h1>
-    <p>{{ product.desc }}</p>
+    <img :src="product.image_url">
+    <h1>{{ product.name }} - {{product.brewer}}</h1>
+    <p>{{ product.size }}</p>
     <button>Agregar a la Lista</button>
   </header>
 </template>

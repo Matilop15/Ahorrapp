@@ -1,11 +1,11 @@
 <template>
     <article>
-      <NuxtLink :to="`/productos/${product.Name}-${product.id}/`">
-        <img :src="product.UrlImg">
+      <NuxtLink :to="`/productos/${product.slug}/`">
+        <img :src="product.image_url">
         <div id="description">
           <div>
-            <h3>{{ product.Name }} - {{ product.Brand }}</h3>
-            <p>{{ product.description }}</p>
+            <h3>{{ product.name }} - {{ product.brewer }}</h3>
+            <p>{{ product.size }}</p>
           </div>
         </div>
       </NuxtLink>
@@ -27,7 +27,7 @@ export default {
 <style scoped>
 
 article {
-  @apply w-40 mb-4 p-3 rounded-xl bg-red-100 shadow-sm relative;
+  @apply w-40 mb-4 p-3 rounded-xl bg-white shadow-md relative;
 }
 
 img {
@@ -38,15 +38,19 @@ img {
   @apply flex justify-between items-center mt-2;
 }
 
+h3 {
+  @apply text-gray-600 font-bold;
+}
+
 p {
   @apply text-gray-500;
 }
 
 button {
-  @apply w-8 h-8 bg-gray-50 rounded-md self-start m-1 absolute bottom-1 right-1;
+  @apply w-8 h-8 bg-red-200 rounded-md self-start m-1 absolute bottom-1 right-1;
 }
 
 svg {
-  @apply m-auto;
+  @apply m-auto text-gray-700;
 }
 </style>

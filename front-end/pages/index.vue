@@ -8,8 +8,7 @@
   </section>
 </template>
 
-<script lang="ts">
-
+<script>
 </script>
 
 <style scoped>

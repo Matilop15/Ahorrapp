@@ -6,6 +6,7 @@
 </template>
 
 <script>
+// /api/providers/<id>
 const sampleData = {
     id: 1,
     name: "Ta-Ta",

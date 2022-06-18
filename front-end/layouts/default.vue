@@ -9,6 +9,6 @@
 </script>
 <style>
 body {
-  @apply bg-gray-50;
+  @apply bg-red-50;
 }
 </style>

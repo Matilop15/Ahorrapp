@@ -40,15 +40,23 @@ export default {
   @apply hidden;
 }
 
+button {
+  @apply h-full;
+}
+
+button > a.nuxt-link-exact-active{
+  @apply text-red-400 bg-red-50;
+}
+
 button > a.nuxt-link-exact-active .tag{
-  @apply block;
+  @apply block font-bold;
 }
 
 button > a {
-  @apply flex flex-col items-center w-32;
+  @apply flex flex-col items-center w-32 h-full justify-center;
 }
 
 nav {
-  @apply fixed bottom-0 w-screen flex justify-around align-middle h-14 bg-red-200 text-gray-500;
+  @apply fixed bottom-0 w-screen flex justify-around align-middle h-14 bg-white text-red-300;
 }
 </style>

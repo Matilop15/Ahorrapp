@@ -2,9 +2,9 @@
   <div>
     <span>
       <p>$ {{product.price}}</p>
-      <h1>{{product.market}}</h1>
+      <h1>{{product.type}}</h1>
     </span>
-    <p>{{product.update_at}}</p>
+    <p>{{product.updatedAt}}</p>
   </div>
 </template>
 

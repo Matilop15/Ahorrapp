@@ -1,28 +1,27 @@
 <template>
   <section>
-    <div>
-      <template v-for="product in products_sample">
-        <IndexProductCard :product="product" :key="product.id" />
-      </template>
+    <div v-for="product in filteredProducts" :key="product.id">
+      <IndexProductCard :product="product"/>
     </div>
   </section>
 </template>
 <script>
-import { useProductsSampleStore } from "../../store/products_sample";
+import { useProductsStore } from "../../store/ProductsStore";
 import { mapState } from 'pinia'
 
 export default {
   name: "IndexProductList",
   computed: {
-    ...mapState(useProductsSampleStore, ['products_sample'])
+    ...mapState(useProductsStore, ['allProducts', 'filteredProducts'])
+  },
+  setup () {
+    const productsStore = useProductsStore();
+    productsStore.getProducts();
   }
 };
 </script>
 <style scoped>
 section {
-  @apply p-3;
-}
-div {
-  @apply w-full flex flex-wrap justify-around;
+  @apply p-3 w-full flex flex-wrap justify-around;
 }
 </style>
