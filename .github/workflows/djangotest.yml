@@ -26,6 +26,10 @@ jobs:
         python -m pip install djangorestframework
         python -m pip install django-cors-headers
         python -m pip install requests
+    - name: Run server
+      run: |
+        python3 manage.py runserver
+      working-directory: ./Ahorrapp
     - name: Run Tests
       run: |
         python manage.py test
