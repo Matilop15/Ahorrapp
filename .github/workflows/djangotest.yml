@@ -25,6 +25,7 @@ jobs:
         python3 -m pip install Django
         python -m pip install djangorestframework
         python -m pip install django-cors-headers
+        python -m pip install requests
     - name: Run Tests
       run: |
         python manage.py test
