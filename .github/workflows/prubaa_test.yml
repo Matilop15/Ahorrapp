@@ -12,10 +12,10 @@ jobs:
       max-parallel: 4
       matrix:
         python-version: [3.8]
-  steps:
-  - name: Checkout action
-    uses: actions/checkout@v3
-  - name: Django Coverage action
-    uses: actions/python-django-coverage-gitHub-action@0.9
-    with:
-      django-app: 'sample_app'
+    steps:
+       - name: Checkout action
+         uses: actions/checkout@v3
+       - name: Django Coverage action
+         uses: actions/python-django-coverage-gitHub-action@0.9
+         with:
+             django-app: 'sample_app'
