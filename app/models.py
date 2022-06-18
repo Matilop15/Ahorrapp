@@ -14,7 +14,7 @@ class Product(models.Model):
     Slug = models.SlugField(max_length=120)
 
 
-class SuperMarkets(models.Model):
+class SuperMarket(models.Model):
     """class SuperMarkets model"""
     SuperMarketId = models.AutoField(primary_key=True)
     Name = models.CharField(max_length=120)
