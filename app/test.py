@@ -1,8 +1,6 @@
 from re import X
-from attr import Factory
 from django.test import TestCase, Client, RequestFactory
 from django.core.management import call_command
-import json
 import requests
 from requests.structures import CaseInsensitiveDict
 
