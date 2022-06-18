@@ -1,11 +1,11 @@
 name: Django back-end branch CI
 
-#on:
-  #push:
-    #branches: [ "back-end" ]
+on:
+  push:
+    branches: [ "back-end" ]
 
-#jobs:
- # build:
+jobs:
+  build:
 
     runs-on: ubuntu-20.04
     strategy:
