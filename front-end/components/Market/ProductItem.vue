@@ -2,7 +2,7 @@
   <article>
     <img :src="product.image_url">
     <ul>
-      <li>{{ product.name }}</li>
+      <li class="productname">{{ product.name }}</li>
       <li>{{ product.size }}</li>
       <li>$ {{ product.price }}</li>
     </ul>
@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 article {
-  @apply flex items-center h-2/4 m-3 p-3 bg-red-100 rounded-md;
+  @apply flex items-center h-2/4 m-3 p-3 bg-white rounded-md shadow-md;
 }
 
 img {
@@ -26,10 +26,14 @@ img {
 }
 
 ul {
-  @apply ml-3 flex-1 w-64;
+  @apply ml-3 flex-1 w-64 text-gray-500;
+}
+
+.productname {
+  @apply text-red-400 font-bold;
 }
 
 span {
-  @apply self-start;
+  @apply self-start text-gray-500;
 }
 </style>

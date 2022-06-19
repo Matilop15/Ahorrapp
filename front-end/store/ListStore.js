@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+import { groupBy } from 'lodash';
 
 export const useListStore = defineStore('ListStore', {
   state: () => {
@@ -8,17 +9,14 @@ export const useListStore = defineStore('ListStore', {
   },
 
   getters: {
-    count () {
-      return this.items.length;
-    }
+    count: (state) => state.items.length,
+    grouped: (state) => groupBy(state.items, (item) => item.beer_id),
+    groupCount: (state) => Object.keys(state.grouped).length
   },
 
   actions: {
-    addItems(count, item) {
-      count = parseInt(count);
-      for (let i = 0; i < count; i++) {
-        this.items.push({ ...item });
-      }
+    addItem (item) {
+      this.items.push({ ...item });
     }
   }
 });

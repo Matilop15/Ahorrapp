@@ -1,11 +1,11 @@
 <template>
   <section>
     <h1>Supermercados:</h1>
-    <template v-for="market in markets">
-      <NuxtLink :to="`/supermercados/${market.name}/`" :key="market.id">
+    <div v-for="market in markets" :key="market.id">
+      <NuxtLink :to="`/supermercados/${market.name}/`" >
         <MarketCard :market="market" />
       </NuxtLink>
-    </template>
+    </div>
   </section>
 </template>
 

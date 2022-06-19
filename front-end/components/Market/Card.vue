@@ -20,15 +20,19 @@ export default {
 
 <style scoped>
 article {
-  @apply flex justify-between h-36 m-3 p-3 bg-red-100 rounded-md shadow-sm;
+  @apply flex justify-between h-36 m-3 p-3 bg-white rounded-xl shadow-md;
 }
 
 h3 {
-  @apply text-lg font-bold;
+  @apply text-lg font-bold text-red-400;
+}
+
+li {
+  @apply text-gray-600;
 }
 
 div {
-  @apply p-2;
+  @apply p-2 ;
 }
 img {
   @apply rounded-md;

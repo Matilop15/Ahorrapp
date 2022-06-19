@@ -3,8 +3,9 @@
     <button>
       <NuxtLink to="/mi-lista">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-      </svg>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+        <span id="count" v-if="groupCount">{{groupCount}}</span>
         <span class="tag">Mi Lista</span>
       </NuxtLink>
     </button>
@@ -30,8 +31,14 @@
 </template>
 
 <script>
+import { useListStore } from "../../store/ListStore";
+import { mapState } from 'pinia';
+
 export default {
-  name: 'PhoneNav'
+  name: 'PhoneNav',
+  computed: {
+    ...mapState(useListStore, ['groupCount'])
+  }
 }
 </script>
 
@@ -41,11 +48,11 @@ export default {
 }
 
 button {
-  @apply h-full;
+  @apply h-full relative;
 }
 
 button > a.nuxt-link-exact-active{
-  @apply text-red-400 bg-red-50;
+  @apply text-red-400 bg-red-50 transition-all ease-in-out delay-200;
 }
 
 button > a.nuxt-link-exact-active .tag{
@@ -58,5 +65,13 @@ button > a {
 
 nav {
   @apply fixed bottom-0 w-screen flex justify-around align-middle h-14 bg-white text-red-300;
+}
+
+#count {
+  @apply absolute top-2 right-10 text-sm font-semibold text-white bg-red-400 not-italic rounded-full w-4;
+}
+
+button > a.nuxt-link-exact-active #count {
+  @apply top-0;
 }
 </style>

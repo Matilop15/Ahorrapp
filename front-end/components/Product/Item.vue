@@ -1,7 +1,7 @@
 <template>
   <div>
     <span>
-      <p>$ {{product.price}}</p>
+      <p class="productprice">$ {{product.price}}</p>
       <h1>{{product.type}}</h1>
     </span>
     <p>{{product.updatedAt}}</p>
@@ -17,6 +17,9 @@ export default {
 
 <style scoped>
 div {
-  @apply flex justify-between p-3;
+  @apply flex justify-between p-3 bg-white;
+}
+.productprice {
+  @apply font-bold text-lg;
 }
 </style>
