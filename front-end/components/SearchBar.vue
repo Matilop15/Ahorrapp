@@ -16,7 +16,7 @@
         />
       </svg>
     </i>
-    <input type="text" name="Search" id="search-bar" @keyup="search($event.target.value)"/>
+    <input type="text" name="Search" id="search-bar" placeholder="Buscar producto" @keyup="search($event.target.value)"/>
   </span>
 </template>
 

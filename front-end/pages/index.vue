@@ -2,7 +2,7 @@
   <section>
     <div id="top" >
       <SearchBar />
-      <Location />
+      <!-- <Location /> -->
     </div>
     <IndexProductList />
   </section>

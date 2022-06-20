@@ -1,5 +1,6 @@
 <template>
   <main>
+    <TheHeader />
     <Nuxt />
     <PhoneNav />
     <TheFooter />
@@ -10,5 +11,9 @@
 <style>
 body {
   @apply bg-red-50;
+}
+
+main {
+  @apply max-w-4xl m-auto
 }
 </style>

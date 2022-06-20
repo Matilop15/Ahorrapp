@@ -30,7 +30,7 @@ ul {
 }
 
 .productname {
-  @apply text-red-400 font-bold;
+  @apply text-red-400 font-semibold;
 }
 
 span {
