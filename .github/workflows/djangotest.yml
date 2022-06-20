@@ -23,8 +23,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python3 -m pip install Django
-        #install rest framework
-        #install cors
+        python -m pip install djangorestframework
+        python -m pip install django-cors-headers
+        python -m pip install requests
+    - name: Run server
+      run: |
+        tmux new-session -d 'python3 manage.py runserver'
+      working-directory: ./
     - name: Run Tests
       run: |
         python manage.py test

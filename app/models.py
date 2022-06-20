@@ -1,4 +1,6 @@
+from datetime import datetime
 from django.db import models
+""" module that defines database models """
 
 
 class brand(models.Model):
