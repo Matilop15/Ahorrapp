@@ -5,7 +5,7 @@ from .models import product_list, sub_category, category
 
 
 @admin.register(product)
-class product_Admin(admin.ModelAdmin):
+class products_Admin(admin.ModelAdmin):
     list_display = ['product_id', 'product_url', 'price',
                     'market_id', 'update_date']
 

@@ -11,16 +11,16 @@ class SuperMarketSerializer(serializers.ModelSerializer):
         fields = ('SuperMarketId', 'Address', 'Name', 'Phone')
 
 
-class ProductSerializer(serializers.ModelSerializer):
-    """class ProductSerializer"""
+class product_listSerializer(serializers.ModelSerializer):
+    """class product_list Serializer"""
     class Meta:
         """class Meta"""
         model = Product
         fields = ('ProductId', 'UrlImg', 'Brand', 'Slug', 'Name')
 
 
-class ProductMarketSerializer(serializers.ModelSerializer):
-    """ProductMarketSerializer class"""
+class productSerializer(serializers.ModelSerializer):
+    """class product serializer"""
     class Meta:
         """class Meta"""
         model = ProductMarket
