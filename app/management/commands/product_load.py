@@ -11,7 +11,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         print("Loading product data from csv into product table")
-        for row in DictReader(open('./product.csv')):
+        for row in DictReader(open('./app/management/csv_files/product.csv')):
             prod =  product()
 
             product_id = row['product_id']

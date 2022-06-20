@@ -7,7 +7,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         print("Loading sub category data from csv into sub category table")
-        for row in DictReader(open('./sub_category.csv')):
+        for row in DictReader(open('./app/management/csv_files/sub_category.csv')):
             sub_cat =  sub_category()
 
             name = row['name']

@@ -7,7 +7,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         print("Loading market data from csv into market table")
-        for row in DictReader(open('./market.csv')):
+        for row in DictReader(open('./app/management/csv_files/market.csv')):
             mark =  market()
 
             name = row['name']

@@ -8,7 +8,7 @@ class Command(BaseCommand):
     """This script loads brand names from csv to brand table"""
     def handle(self, *args, **options):
         print("Loading brand data from csv into brand table")
-        for row in DictReader(open('./brand.csv')):
+        for row in DictReader(open('./app/management/csv_files/brand.csv')):
             _brand = brand()
             name = row['name']
             print(name)

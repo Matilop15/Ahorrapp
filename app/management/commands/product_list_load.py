@@ -8,7 +8,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         print("Loading product_list data from csv into product_list table")
-        for row in DictReader(open('./product_list.csv')):
+        for row in DictReader(open('./app/management/csv_files/product_list.csv')):
             prod = product_list()
 
             name = row['name']
