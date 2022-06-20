@@ -1,7 +1,7 @@
 <template>
   <article>
     <div class="desc-item">
-      <img :src="item[0].image_url">
+      <img :src="item[0].image_url" :alt="item[0].name">
       <div>
         <h1>{{item[0].name}}</h1>
         <p>{{item[0].size}}</p>
@@ -50,6 +50,10 @@ article {
 
 .desc-item {
   @apply flex items-center;
+}
+
+.desc-item div{
+  @apply ml-3;
 }
 
 img {

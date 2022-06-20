@@ -8,7 +8,7 @@
         <li><a :href="market.url">{{ market.url }}</a></li>
       </ul>
     </div>
-    <img :src="market.picture">
+    <img :src="market.picture" :alt="market.name">
   </article>
 </template>
 <script>

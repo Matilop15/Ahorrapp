@@ -1,7 +1,7 @@
 <template>
     <article>
       <NuxtLink :to="`/productos/${product.slug}/`">
-        <img :src="product.image_url">
+        <img :src="product.image_url" :alt="product.name">
         <div id="description">
           <div>
             <h3>{{ product.name }} - {{ product.brewer }}</h3>

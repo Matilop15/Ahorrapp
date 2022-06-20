@@ -225,3 +225,7 @@ sw.*
 
 .nuxt-storybook
 storybook-static
+
+#pwa
+
+sw.*

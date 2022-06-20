@@ -44,7 +44,7 @@ export default {
 
 <style scope>
 .phone-nav {
-  @apply fixed bottom-0 w-screen flex justify-around align-middle h-14 bg-white text-red-300 sm:hidden;
+  @apply fixed bottom-0 w-screen flex justify-around align-middle h-14 bg-white text-red-400 sm:hidden;
 }
 
 .tag {
@@ -56,7 +56,7 @@ export default {
 }
 
 nav a.nuxt-link-exact-active{
-  @apply text-red-400 bg-red-50 transition-all ease-in-out delay-200;
+  @apply bg-red-50 transition-all ease-in-out delay-200;
 }
 
 .nav-button > a.nuxt-link-exact-active .tag{

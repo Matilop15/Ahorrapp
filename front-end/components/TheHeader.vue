@@ -2,7 +2,7 @@
   <header>
     <NuxtLink to="/">
       <div id="logo">
-        <img src="../static/logo.png" alt="">
+        <img src="../static/logo.png" alt="Logo Ahorrapp">
         <h1>Ahorrapp</h1>
       </div>
     </NuxtLink>
@@ -39,7 +39,7 @@ header {
 }
 
 #desktop-nav {
-  @apply text-red-300 hidden sm:flex;
+  @apply text-red-400 font-semibold hidden sm:flex;
 }
 
 #desktop-nav > a{

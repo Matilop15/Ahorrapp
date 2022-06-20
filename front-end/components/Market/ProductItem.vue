@@ -1,6 +1,6 @@
 <template>
   <article>
-    <img :src="product.image_url">
+    <img :src="product.image_url" :alt="product.name">
     <ul>
       <li class="productname">{{ product.name }}</li>
       <li>{{ product.size }}</li>
