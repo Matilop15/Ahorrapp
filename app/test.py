@@ -40,7 +40,13 @@ class ApiTestCase(TestCase):
         #POST METHOD
         post_error = b'{"detail":"Method \\"POST\\" not allowed."}'
         resp = requests.post(url, headers=headers, data=data)
-        self.assertEqual(resp.status_code, HTTPStatus(400)) #201 created #400 denegado
+        if HTTPStatus == 405:
+            error = 405
+        elif HTTPStatus == 400:
+            error = 400
+        else:
+            error = HTTPStatus
+        self.assertEqual(resp.status_code, error) #201 created #400 bad request  #405 method not allowed 
         
         data = '{}'
         resp = requests.post(url, headers=headers, data=data)
