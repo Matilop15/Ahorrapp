@@ -31,4 +31,4 @@ name: Front deploy CI
           SOURCE: "front-end/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST_SERVER_2 }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ./front-end
+          TARGET: ./Ahorrapp/front-end
