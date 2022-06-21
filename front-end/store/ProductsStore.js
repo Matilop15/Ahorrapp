@@ -1,10 +1,11 @@
 import { defineStore } from 'pinia';
+import { useStorage } from '@vueuse/core';
 
 export const useProductsStore = defineStore('ProductsStore', {
 
   state: () => {
     return {
-      allProducts: [],
+      allProducts: useStorage('allProducts', []),
       filteredProducts: [],
       filters: {
         s: ''
@@ -14,12 +15,14 @@ export const useProductsStore = defineStore('ProductsStore', {
 
   actions: {
     async getProducts () {
-      try {
-        this.allProducts = await fetch('https://api.nuxtjs.dev/beers')
-          .then((response) => response.json());
-        this.filteredProducts = [...this.allProducts];
-      } catch (error) {
-        console.log(error);
+      if (this.allProducts) {
+        try {
+          this.allProducts = await fetch('https://api.nuxtjs.dev/beers')
+            .then((response) => response.json());
+          this.filteredProducts = [...this.allProducts];
+        } catch (error) {
+          console.log(error);
+        }
       }
     },
     search (s) {

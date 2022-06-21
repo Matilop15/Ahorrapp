@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { groupBy, findLastKey } from 'lodash';
+import { groupBy } from 'lodash';
 import { useStorage } from '@vueuse/core';
 
 export const useListStore = defineStore('ListStore', {
@@ -12,16 +12,27 @@ export const useListStore = defineStore('ListStore', {
   getters: {
     count: (state) => state.items.length,
     grouped: (state) => groupBy(state.items, (item) => item.beer_id),
-    groupCount: (state) => Object.keys(state.grouped).length,
-    itemAmount: (state) => (id) => Object.values(state.grouped[id]).length
+    groupCount: (state) => (id) => {
+      if (state.grouped[id]) {
+        return state.grouped[id].length;
+      } else {
+        return false;
+      }
+    }
   },
 
   actions: {
-    addItem(item) {
-      this.items.push({ ...item });
+    addItem(count, item) {
+      for (let i = 0; i < count; i++) {
+        this.items.push({ ...item });
+      }
     },
     clearItem(id) {
       this.items = this.items.filter((item) => item.beer_id !== id);
+    },
+    setItemAmount(count, item) {
+      this.clearItem(item.beer_id);
+      this.addItem(count, item);
     }
   }
 });

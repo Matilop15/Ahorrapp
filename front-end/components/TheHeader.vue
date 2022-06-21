@@ -9,7 +9,7 @@
     <nav id="desktop-nav">
       <NuxtLink to="/mi-lista">
         <span id="list">
-          <span id="desktop-nav-count" v-if="groupCount">{{groupCount}}</span>
+          <span id="desktop-nav-count" v-if="count">{{count}}</span>
           <span>Mi Lista</span>
         </span>
       </NuxtLink>
@@ -27,7 +27,7 @@ import { mapState } from 'pinia';
 export default {
   name: 'TheHeader',
   computed: {
-    ...mapState(useListStore, ['groupCount'])
+    ...mapState(useListStore, ['count'])
   }
 }
 </script>

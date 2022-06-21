@@ -1,16 +1,26 @@
 <template>
   <header>
+    
     <img :src="product.image_url">
     <h1>{{ product.name }} - {{product.brewer}}</h1>
     <p>{{ product.size }}</p>
-    <button>Agregar a la Lista</button>
+    <button @click="addItem('1' ,product)">
+    <span class="amount-list" v-if="groupCount(product.beer_id)">{{ groupCount(product.beer_id) }}</span>
+    Agregar a la Lista
+    </button>
   </header>
 </template>
 
 <script>
+import { useListStore } from "../../store/ListStore";
+import { mapState } from 'pinia';
+
 export default {
   name: 'ProductCard',
-  props: ['product']
+  props: ['product'],
+  computed: {
+    ...mapState(useListStore, ['addItem', 'groupCount'])
+  }
 }
 </script>
 
@@ -28,6 +38,10 @@ h1 {
 }
 
 button {
-  @apply bg-red-200 w-64 h-12 mt-5 shadow-sm rounded-xl;
+  @apply relative bg-red-200 w-64 h-12 mt-5 shadow-sm rounded-xl;
+}
+
+.amount-list {
+  @apply absolute -right-2 -top-2 text-center font-semibold text-white bg-red-400 not-italic rounded-full w-6;;
 }
 </style>
