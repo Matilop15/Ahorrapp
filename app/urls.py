@@ -5,8 +5,8 @@ from .views import ProductMarketViewSet, ProductViewSet, SuperMarketViewSet
 
 router = DefaultRouter()
 router.register(r'products', ProductViewSet)
-router.register(r'supermarkets', SuperMarketViewSet)
-router.register(r'productmarkets', ProductMarketViewSet)
+router.register(r'markets', SuperMarketViewSet)
+router.register(r'product_list', ProductMarketViewSet)
 # router.register(r'products-supermarket', AllProductsViewSet)
 
 urlpatterns = [
