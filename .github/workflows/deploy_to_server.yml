@@ -18,5 +18,5 @@ name: deploy BACKend CI
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST_SERVER_2 }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ./back-end
+          TARGET: ./Ahorrapp/back-end
           #EXCLUDE: "/DjangoA/, /app/"
