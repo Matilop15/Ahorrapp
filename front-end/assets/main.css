@@ -1,0 +1,17 @@
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+@font-face {
+  font-family: 'Archive';
+  src: url('Archive.woff2') format('woff2'),
+      url('Archive.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
