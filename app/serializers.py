@@ -1,12 +1,11 @@
-from pyexpat import model
 from rest_framework import serializers
 from .models import product_list, product, market
 from .models import category, sub_category, brand
 """ serializers """
 
 
-class SuperMarketSerializer(serializers.ModelSerializer):
-    """class SuperMarkets serializer"""
+class marketSerializer(serializers.ModelSerializer):
+    """class market serializer"""
     class Meta:
         """class Meta"""
         model = market

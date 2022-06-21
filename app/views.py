@@ -1,25 +1,25 @@
 from urllib import request
 from rest_framework import viewsets
 from django.http import JsonResponse
-from .serializers import SuperMarketSerializer, product_listSerializer, productSerializer
+from .serializers import productSerializer, product_listSerializer, marketSerializer
 from .models import product, product_list, market
 """ Defines views """
 
 
-class ProductViewSet(viewsets.ReadOnlyModelViewSet):
-    """ Product View Set """
+class productViewSet(viewsets.ReadOnlyModelViewSet):
+    """ product view Set """
     serializer_class = productSerializer
     queryset = product.objects.all()
 
 
-class SuperMarketViewSet(viewsets.ReadOnlyModelViewSet):
-    """ Super Market View Set """
-    serializer_class = SuperMarketSerializer
+class marketViewSet(viewsets.ReadOnlyModelViewSet):
+    """ market view Set """
+    serializer_class = marketSerializer
     queryset = market.objects.all()
 
 
-class ProductMarketViewSet(viewsets.ReadOnlyModelViewSet):
-    """ Product Market View set """
+class product_listViewSet(viewsets.ReadOnlyModelViewSet):
+    """ product list view set """
     serializer_class = product_listSerializer
     queryset = product_list.objects.all()
 
