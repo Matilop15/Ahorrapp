@@ -8,7 +8,7 @@ from requests.structures import CaseInsensitiveDict
 from http import HTTPStatus
 
 # Models
-from django.contrib.auth.models import User
+from app.models import product
 from requests import request
 
 
@@ -113,7 +113,7 @@ class ApiTestCase(TestCase):
 
     def test_Api_Productmarkets(self):
         """All test for api/products/"""
-        url = "http://localhost:8000/api/product_list/"
+        url = "http://localhost:8000/api/product-list/"
         headers = CaseInsensitiveDict()
         headers["Content-Type"] = "application/json"
         data = '{"name":"Harina 0000 Cañuelas 1 Kg","img_url":"https://TEST.img","brand_id":405,"cat_id":1,"sub_id":1}'
