@@ -3,6 +3,8 @@ Final project MVP base created with Django
 
 ## Install Django
 `$ python3 -m pip install Django`
+`python -m pip install djangorestframework`
+`python -m pip install django-cors-headers`
 ## How to run server
 In the manage.py folder run <br>
 `$ python3 manage.py runserver`
