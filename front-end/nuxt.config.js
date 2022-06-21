@@ -13,7 +13,11 @@ export default {
         name: 'description',
         content: 'Comparador de precios de Supermercados'
       },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      {
+        name: 'author',
+        content: 'Bruno Rodríguez, Matias Lopéz, Angel Piva, Şahin MERİÇ'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
