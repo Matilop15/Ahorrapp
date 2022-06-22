@@ -47,3 +47,10 @@ class brandSerializer(serializers.ModelSerializer):
     class Meta:
         model = brand
         fields = '__all__'
+
+class market_productsSerializer(serializers.ModelSerializer):
+    """class market products serializer"""
+    class Meta:
+        """class Meta"""
+        model = product
+        fields = '__all__'

@@ -1,7 +1,7 @@
-from urllib import request
 from rest_framework import viewsets
+from rest_framework import generics
 from django.http import JsonResponse
-from .serializers import productSerializer, product_listSerializer, marketSerializer
+from .serializers import productSerializer, product_listSerializer, marketSerializer, market_productsSerializer
 from .models import product, product_list, market
 """ Defines views """
 
@@ -24,14 +24,7 @@ class product_listViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = product_list.objects.all()
 
 
-# class AllProductsViewSet(viewsets.ViewSet):
-    # """ All products from a supermarket"""
-
-    # def retrieve(self, request, *args, **kwargs):
-        # queryParams = self.request.GET.get('abc')
-        # inner_qs = ProductMarket.objects.filter(SuperMarketId_id=queryParams)
-        # entries = Product.objects.filter(ProductId__in=inner_qs)
-        # queryset = Product.objects.filter(ProductId = queryParams)
-        # serializer = PlayerSerializer(queryset)
-        # return Response(serializer.data)
-
+class disco_productsViewSet(viewsets.ReadOnlyModelViewSet):
+    """ disco market products view Set """
+    serializer_class = market_productsSerializer
+    queryset = product.objects.all().filter(market_id=1)
