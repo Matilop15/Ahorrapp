@@ -73,7 +73,7 @@ class ApiTestCase(TestCase):
         self.assertEqual(resp.status_code, HTTPStatus(405)) #405 denegado #204 YES DELETE, no content
         self.assertEqual(resp.content, delete_error)
         
-    def test_Api_Products(self):
+    def test_api_product(self):
         """All test for api/products/"""
         url = "http://localhost:8000/api/products/"
         headers = CaseInsensitiveDict()
@@ -111,12 +111,12 @@ class ApiTestCase(TestCase):
         self.assertEqual(resp.status_code, HTTPStatus(405)) #405 denegado #204 YES DELETE, no content
         self.assertEqual(resp.content, delete_error)
 
-    def test_Api_Productmarkets(self):
+    def test_Api_product_list(self):
         """All test for api/products/"""
         url = "http://localhost:8000/api/product_list/"
         headers = CaseInsensitiveDict()
         headers["Content-Type"] = "application/json"
-        data = '{"name":"Harina 0000 Cañuelas 1 Kg","img_url":"https://TEST.img","brand_id":405,"cat_id":1,"sub_id":1}'
+        data = '{"id":1,"name":"Harina 0000 Cañuelas 1 Kg","img_url":"https://TEST.img","brand_id":405,"cat_id":1,"sub_id":1}'
         
         #POST METHOD
         post_error = b'{"detail":"Method \\"POST\\" not allowed."}'
