@@ -14,6 +14,7 @@ class market(models.Model):
     """class market model"""
     name = models.CharField(max_length=50)
     url = models.URLField()
+    img_url = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
