@@ -2,7 +2,7 @@
   <article>
     <ProductCard :product="product"/>
     <hr>
-    <ProductList />
+    <ProductList :id="product.id"/>
   </article>
 </template>
 
@@ -14,7 +14,7 @@ export default {
     };
   },
   async asyncData({ params, $http }) {
-    const product = await $http.$get(`https://api.nuxtjs.dev/beers/${params.id}`)
+    const product = await $http.$get(`https://www.ahorrapp.me/api/product_list/${params.id}`)
     return { product }
   }
 };

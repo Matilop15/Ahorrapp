@@ -11,7 +11,7 @@ export const useListStore = defineStore('ListStore', {
 
   getters: {
     count: (state) => state.items.length,
-    grouped: (state) => groupBy(state.items, (item) => item.beer_id),
+    grouped: (state) => groupBy(state.items, (item) => item.id),
     groupCount: (state) => (id) => {
       if (state.grouped[id]) {
         return state.grouped[id].length;
@@ -28,10 +28,10 @@ export const useListStore = defineStore('ListStore', {
       }
     },
     clearItem(id) {
-      this.items = this.items.filter((item) => item.beer_id !== id);
+      this.items = this.items.filter((item) => item.id !== id);
     },
     setItemAmount(count, item) {
-      this.clearItem(item.beer_id);
+      this.clearItem(item.id);
       this.addItem(count, item);
     }
   }

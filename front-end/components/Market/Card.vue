@@ -3,12 +3,9 @@
     <div>
       <h3>{{ market.name }}</h3>
       <ul>
-        <li>{{ market.address }}</li>
-        <li>{{ market.phone }}</li>
         <li><a :href="market.url">{{ market.url }}</a></li>
       </ul>
     </div>
-    <img :src="market.picture" :alt="market.name">
   </article>
 </template>
 <script>

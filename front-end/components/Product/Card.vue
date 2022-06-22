@@ -1,11 +1,10 @@
 <template>
   <header>
     
-    <img :src="product.image_url">
-    <h1>{{ product.name }} - {{product.brewer}}</h1>
-    <p>{{ product.size }}</p>
+    <img :src="product.img_url">
+    <h1>{{ product.name }}</h1>
     <button @click="addItem('1' ,product)">
-    <span class="amount-list" v-if="groupCount(product.beer_id)">{{ groupCount(product.beer_id) }}</span>
+    <span class="amount-list" v-if="groupCount(product.id)">{{ groupCount(product.id) }}</span>
     Agregar a la Lista
     </button>
   </header>

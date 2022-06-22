@@ -1,12 +1,11 @@
 <template>
     <article>
-      <NuxtLink :to="`/productos/${product.slug}/`">
-        <span class="amount-list" v-if="groupCount(product.beer_id)">{{ groupCount(product.beer_id)}}</span>
-        <img :src="product.image_url" :alt="product.name">
+      <NuxtLink :to="`/productos/${product.id}/`">
+        <span class="amount-list" v-if="groupCount(product.id)">{{ groupCount(product.id)}}</span>
+        <img :src="product.img_url" :alt="product.name">
         <div id="description">
           <div>
-            <h3>{{ product.name }} - {{ product.brewer }}</h3>
-            <p>{{ product.size }}</p>
+            <h3>{{ product.name }}</h3>
           </div>
         </div>
       </NuxtLink>
@@ -34,7 +33,7 @@ export default {
 <style scoped>
 
 article {
-  @apply w-40 mb-4 p-3 rounded-xl bg-white shadow-md relative;
+  @apply w-40 h-44 mb-4 p-3 rounded-xl bg-white shadow-md relative;
 }
 
 img {
@@ -46,7 +45,12 @@ img {
 }
 
 h3 {
-  @apply text-gray-600 font-bold;
+  @apply text-gray-600 font-bold w-28;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
 }
 
 p {

@@ -1,18 +1,31 @@
 <template>
-  <article>
-    <img :src="product.image_url" :alt="product.name">
+  <article v-if="product.price">
+    <img :src="getProductImg(allProducts, product.product_id)" :alt="product.name">
     <ul>
-      <li class="productname">{{ product.name }}</li>
-      <li>{{ product.size }}</li>
+      <li class="productname">{{ getProductName(allProducts, product.product_id) }}</li>
       <li>$ {{ product.price }}</li>
     </ul>
-    <span>{{ product.updatedAt }}</span>
+    <span>{{ product.update_date }}</span>
   </article>
 </template>
 <script>
+import { useProductsStore } from "../../store/ProductsStore";
+import { mapState } from 'pinia'
+
 export default {
-    name: 'MarketProductItem',
-    props: ["product"]
+  name: 'MarketProductItem',
+  props: ["product"],
+  computed: {
+  ...mapState(useProductsStore, ['allProducts'])
+  },
+  methods: {
+    getProductName: (products, id) => {
+      return products.filter((products) => products.id === id)[0].name
+    },
+    getProductImg: (products, id) => {
+      return products.filter((products) => products.id === id)[0].img_url
+    }
+  }
 }
 </script>
 

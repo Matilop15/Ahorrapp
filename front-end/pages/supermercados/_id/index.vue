@@ -1,20 +1,12 @@
 <template>
   <section>
     <MarketCard :market="market" />
-    <MarketProductList />
+    <MarketProductList :id="$route.params.id"/>
   </section>
 </template>
 
 <script>
 // /api/providers/<id>
-const sampleData = {
-    id: 1,
-    name: "Ta-Ta",
-    picture: "https://picsum.photos/200",
-    address: "18 Julio",
-    phone: "12444224",
-    url: "https://www.tata.com.uy/"
-  };
 
 export default {
     head() {
@@ -22,13 +14,9 @@ export default {
             title: "Supermercado"
         };
     },
-    data() {
-        return {
-            market: {}
-        };
-    },
-    async fetch() {
-        this.market = sampleData;
+    async asyncData({ params, $http }) {
+        const market = await $http.$get(`https://www.ahorrapp.me/api/markets/${params.id}`);
+        return { market }
     }
 };
 </script>

@@ -1,8 +1,8 @@
 <template>
   <section>
     <hr>
-    <h2>Productos:</h2>
-    <div v-for="product in products" :key="product.id">
+    <h2>Productos: {{id}}</h2>
+    <div v-for="product in filterItems(allMarketProducts, id)" :key="product.id">
       <MarketProductItem :product="product" />
     </div>
   </section>
@@ -10,13 +10,19 @@
 
 <script>
 // /api/products/providers/<providers_id>/ productos  trae productos de ese super
+import { useAllMarketProductsStore } from "../../store/AllMarketProductsStore";
+import { mapState } from 'pinia'
 
 export default {
-  data: () => ({
-    products: []
-  }),
-  async fetch() {
-    this.products = await this.$http.$get('https://api.nuxtjs.dev/beers');
+  name: 'MarketProductList',
+  props: ['id'],
+  computed: {
+    ...mapState(useAllMarketProductsStore, ['allMarketProducts'])
+  },
+  methods: {
+    filterItems: (items, id) => {
+      return items.filter((item) => item.market_id === parseInt(id))
+    }
   }
 };
 </script>
