@@ -1,14 +1,14 @@
 name: Front deploy CI
 
-#on: 
- #  push:
-  #   branches:
-   #   - frontend
+on: 
+  push:
+     branches:
+      - frontend
 
-#jobs:
- # build:
-  #  runs-on: ubuntu-latest
-   # steps:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
     - uses: actions/checkout@v3
     - name: Install Node.js
       uses: actions/setup-node@v3.3.0
@@ -31,4 +31,4 @@ name: Front deploy CI
           SOURCE: "front-end/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST_SERVER_2 }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ./front-end
+          TARGET: ./Ahorrapp/front-end
