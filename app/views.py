@@ -28,3 +28,21 @@ class disco_productsViewSet(viewsets.ReadOnlyModelViewSet):
     """ disco market products view Set """
     serializer_class = market_productsSerializer
     queryset = product.objects.all().filter(market_id=1)
+
+
+class geant_productsViewSet(viewsets.ReadOnlyModelViewSet):
+    """ geant market products view set """
+    serializer_class = market_productsSerializer
+    queryset = product.objects.all().filter(market_id=2)
+
+
+class tata_productsViewSet(viewsets.ReadOnlyModelViewSet):
+    """ tata market products view set """
+    serializer_class = market_productsSerializer
+    queryset = product.objects.all().filter(market_id=3)
+
+
+class tiendainglesa_productsViewSet(viewsets.ReadOnlyModelViewSet):
+    """ tienda inglesa market products view set """
+    serializer_class = market_productsSerializer
+    queryset = product.objects.all().filter(market_id=4)
