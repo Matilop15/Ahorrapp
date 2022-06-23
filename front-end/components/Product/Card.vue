@@ -29,11 +29,11 @@ header {
 }
 
 img {
-  @apply h-48 w-48 rounded-xl shadow-sm;
+  @apply h-48 w-auto rounded-xl shadow-sm;
 }
 
 h1 {
-  @apply text-xl font-bold mt-5;
+  @apply text-xl font-bold mt-5 text-center;
 }
 
 button {

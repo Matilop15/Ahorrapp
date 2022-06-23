@@ -37,7 +37,7 @@ article {
 }
 
 img {
-  @apply w-full rounded-xl;
+  @apply h-24 m-auto rounded-xl;
 }
 
 #description {
