@@ -3,7 +3,6 @@
     <div v-for="product in filteredProducts" :key="product.id">
       <LazyIndexProductCard :product="product"/>
     </div>
-    <button class="more-btn" v-if="!filters.s" v-show="filters.page <= lastPage" @click="loadMore()">Cargar más</button>
   </section>
 </template>
 <script>
@@ -25,6 +24,24 @@ export default {
     AllMarketProductsStore.getallMarketProducts();
     MarketsStore.getallMarkets();
     productsStore.lastPage = ~~(productsStore.allProducts.length / productsStore.perPage);
+
+    const { scrollHeight } = document.documentElement;
+    if (scrollHeight > 520) {
+      productsStore.loadMore()
+    } 
+    window.addEventListener('scroll', function () {
+      const {
+          scrollTop,
+          scrollHeight,
+          clientHeight
+      } = document.documentElement;
+
+      if (scrollTop + clientHeight >= scrollHeight - 5 || scrollHeight < 520) {
+          productsStore.loadMore()
+      }
+    })
+
+    
   }
 };
 </script>
