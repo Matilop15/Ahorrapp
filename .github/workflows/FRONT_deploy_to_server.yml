@@ -1,12 +1,12 @@
 name: Front deploy CI
 
-#on: 
- # push:
-  #   branches:
-   #   - dev
+on: 
+  push:
+     branches:
+      - dev
 
-#jobs:
- # build:
+jobs:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
