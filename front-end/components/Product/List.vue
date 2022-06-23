@@ -10,7 +10,6 @@
 // /api/products/<product_id> todos los productos con el mismo id
 import { useAllMarketProductsStore } from "../../store/AllMarketProductsStore";
 import { mapState } from 'pinia'
-import { sortBy } from 'lodash';
 
 
 export default {

@@ -33,6 +33,9 @@ export const useListStore = defineStore('ListStore', {
     setItemAmount(count, item) {
       this.clearItem(item.id);
       this.addItem(count, item);
+    },
+    clearList() {
+      this.items = [];
     }
   }
 });

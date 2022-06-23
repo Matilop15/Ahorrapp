@@ -45,8 +45,6 @@ export const useProductsStore = defineStore('ProductsStore', {
       this.filteredProducts = [
         ...this.allProducts.slice(0, this.filters.page * this.perPage)
       ];
-      console.log(this.filters.page + ' ' + this.lastPage)
-      console.log(this.filters.page < this.lastPage)
     }
   }
 });
