@@ -9,7 +9,7 @@ export const useMarketsStore = defineStore('MarketsStore', {
   },
 
   actions: {
-    async getallMarkets() {
+    async getallMarkets () {
       try {
         this.allMarkets = await fetch(
           'https://www.ahorrapp.me/api/markets/'

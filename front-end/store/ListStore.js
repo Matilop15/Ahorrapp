@@ -22,19 +22,19 @@ export const useListStore = defineStore('ListStore', {
   },
 
   actions: {
-    addItem(count, item) {
+    addItem (count, item) {
       for (let i = 0; i < count; i++) {
         this.items.push({ ...item });
       }
     },
-    clearItem(id) {
+    clearItem (id) {
       this.items = this.items.filter((item) => item.id !== id);
     },
-    setItemAmount(count, item) {
+    setItemAmount (count, item) {
       this.clearItem(item.id);
       this.addItem(count, item);
     },
-    clearList() {
+    clearList () {
       this.items = [];
     }
   }
