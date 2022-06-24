@@ -16,7 +16,7 @@
         />
       </svg>
     </i>
-    <input type="text" name="Search" id="search-bar" placeholder="Buscar producto" @keyup="search($event.target.value)"/>
+    <input autocomplete="off" type="text" name="Search" id="search-bar" placeholder="Buscar producto" @keyup="search($event.target.value)"/>
   </span>
 </template>
 
@@ -28,9 +28,6 @@ export default {
   name: "SearchBar",
   computed: {
     ...mapState(useProductsStore, ['search'])
-  },
-  setup() {
-    const productsStore = useProductsStore();
   }
 };
 </script>
