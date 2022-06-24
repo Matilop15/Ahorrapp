@@ -1,8 +1,8 @@
-name: Django back-end branch CI
+#name: Django back-end branch CI
 
-on:
-  push:
-    branches: [ "back-end" ]
+#on:
+  #push:
+    #branches: [ "back-end" ]
 
 jobs:
   build:
