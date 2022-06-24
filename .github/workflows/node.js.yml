@@ -12,10 +12,11 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    working-directory: /frontend
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+    - name: setup
+      working-directory: /frontend
     - name: Cypress.io
       uses: cypress-io/github-action@v4.1.0
       with:
