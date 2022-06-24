@@ -35,7 +35,7 @@ export default {
 <style scoped>
 
 header {
-  @apply m-3 mb-0 flex justify-between items-center;
+  @apply sticky top-0 z-10 m-3 bg-red-50 mb-0 flex justify-between items-center;
 }
 
 #desktop-nav {

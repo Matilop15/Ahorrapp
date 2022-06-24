@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="go-top">
     <TheHeader />
     <Nuxt />
     <PhoneNav />

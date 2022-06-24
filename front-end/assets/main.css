@@ -7,6 +7,10 @@
   opacity: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'Archive';
   src: url('Archive.woff2') format('woff2'),

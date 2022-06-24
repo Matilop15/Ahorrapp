@@ -1,7 +1,7 @@
 <template>
   <section>
     <hr>
-    <h2>Productos: {{id}}</h2>
+    <h2>Productos:</h2>
     <div v-for="product in filterItems(allMarketProducts, id)" :key="product.id">
       <MarketProductItem :product="product" />
     </div>
@@ -9,7 +9,6 @@
 </template>
 
 <script>
-// /api/products/providers/<providers_id>/ productos  trae productos de ese super
 import { useAllMarketProductsStore } from "../../store/AllMarketProductsStore";
 import { mapState } from 'pinia'
 
