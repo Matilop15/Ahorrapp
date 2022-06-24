@@ -8,7 +8,7 @@ from .views import tata_productsViewSet, tiendainglesa_productsViewSet
 router = DefaultRouter()
 router.register(r'products', productViewSet)
 router.register(r'markets', marketViewSet)
-router.register(r'product-list', product_listViewSet)
+router.register(r'product_list', product_listViewSet)
 router.register(r'disco-products', disco_productsViewSet)
 router.register(r'geant-products', geant_productsViewSet)
 router.register(r'tata-products', tata_productsViewSet)
