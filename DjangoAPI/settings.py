@@ -27,7 +27,7 @@ ALLOWED_HOSTS = [
     'www.ahorrapp.me',
     '127.0.0.1'
 ]
-CSRF_TRUSTED_ORIGINS = ['https://www.ahorrapp.me']
+CSRF_TRUSTED_ORIGINS = ['https://www.ahorrapp.me/api/admin']
 
 # Application definition
 
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
