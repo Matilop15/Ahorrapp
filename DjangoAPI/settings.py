@@ -27,7 +27,7 @@ ALLOWED_HOSTS = [
     'www.ahorrapp.me',
     '127.0.0.1'
 ]
-
+CSRF_TRUSTED_ORIGINS = ['https://www.ahorrapp.me']
 
 # Application definition
 
