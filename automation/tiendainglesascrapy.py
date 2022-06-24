@@ -29,10 +29,10 @@ for i in responses:
                 if key == "offers":
                     for key, new_price in value.items():
                         if key == 'price':
-                            if new_price[2] == ".":
-                                new_price = new_price[:2]
-                            elif new_price[3] == ".":
-                                new_price = new_price[:3]
+                            for i in range(len(new_price)):
+                                if new_price[i] == ".":
+                                    new_price = new_price[:i]
+                                    break
                             disco_prices[id_prod] = new_price
                             print(disco_prices)
 

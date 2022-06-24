@@ -21,9 +21,9 @@ for i in responses:
             price = box.findAll('meta')[1]
             prices = str(price)
             new_price = prices[15:18]
-            if new_price[2] == ".":
-                new_price = new_price[:2]
+            for i in range(len(new_price)):
+                if new_price[i] == ".":
+                    new_price = new_price[:i]
+                    break
             disco_prices[id_prod] = new_price
             print(disco_prices)
-
-            

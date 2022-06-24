@@ -10,7 +10,7 @@ respuesta = requests.get(api)
 responses = respuesta.json()
 for i in responses:
     for key, value in i.items():
-        disco_prices = {}
+        tata_prices = {}
         if key == 'id':
             id_prod = value
         if key == 'product_url'  and value != "-":
@@ -21,8 +21,9 @@ for i in responses:
             box = soup.find('em', class_='valor-dividido')
             price = box.find('strong').get_text()
             price = price[2:]
-            if price[2] == ",":
-                price = price[:2]
-            elif price[3] == ",":
-                price = price[:3]
-            print(price)
+            for i in range(len(price)):
+                if price[i] == ",":
+                    price = price[:i]
+                    break
+            tata_prices[id_prod] = price
+            print(tata_prices)
