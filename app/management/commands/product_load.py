@@ -7,12 +7,12 @@ from app.models import market, product, product_list
 
 DATETIME_FORMAT = '%m/%d/%Y %H:%M'
 
-class Command(BaseCommand):
 
+class Command(BaseCommand):
     def handle(self, *args, **options):
         print("Loading product data from csv into product table")
         for row in DictReader(open('./app/management/csv_files/product.csv')):
-            prod =  product()
+            prod = product()
 
             product_id = row['product_id']
             product_url = row['product_url']
