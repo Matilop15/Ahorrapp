@@ -30,7 +30,7 @@ jobs:
     - name: Cypress.io
       uses: cypress-io/github-action@v4.1.0
       with:
-          start: yarn start
-      working-directory: ./front-end
+        start: yarn start
+        path: ./front-end
 
     
