@@ -55,7 +55,7 @@ export default {
 
 <style scoped>
 #compare-lists {
-  @apply flex overflow-auto;
+  @apply flex overflow-auto mt-4 mb-4;
 }
 
 </style>

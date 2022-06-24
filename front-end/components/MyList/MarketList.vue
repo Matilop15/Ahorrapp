@@ -38,7 +38,7 @@ h2 {
 }
 
 .marketlists {
-  @apply w-80 ;
+  @apply w-80 border-2 m-1 rounded-xl border-red-100;
 }
 
 </style>

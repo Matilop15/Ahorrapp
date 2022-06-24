@@ -7,7 +7,7 @@
     <div v-else v-for="item in grouped" :key="item.id">
       <MyListItem :item="item"/>
     </div>
-    <div class="flex justify-center">
+    <div v-if="count !== 0" class="flex justify-center">
       <button id="clearlist" @click="clearList()">Limpiar Lista</button>
     </div>
     <MyListCompare />
