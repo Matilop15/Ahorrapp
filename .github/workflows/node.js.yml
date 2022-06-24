@@ -10,17 +10,26 @@ on:
     branches: [ "dev" ]
 
 jobs:
-  cypress-run:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: setup
-      working-directory: frontend
-      run: npm run build
+    - uses: actions/checkout@v3
+    - name: Install Node.js
+      uses: actions/setup-node@v3.3.0
+      with:
+        node-version: '16.x'
+        cache-dependency-path: front-end/package.json
+        
+    - name: Install yarn dependencies
+      run: yarn install
+      working-directory: ./front-end
+       
+    - name: Run build task
+      run: yarn run build --if-present
+      working-directory: ./front-end
     - name: Cypress.io
       uses: cypress-io/github-action@v4.1.0
       with:
-          start: npm start
+          start: yarn start
 
     
