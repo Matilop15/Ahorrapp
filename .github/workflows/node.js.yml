@@ -32,5 +32,6 @@ jobs:
       with:
         working-directory: ./front-end
         start: yarn start
+        browser: chrome
 
     
