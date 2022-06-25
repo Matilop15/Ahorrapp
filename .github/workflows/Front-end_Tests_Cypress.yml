@@ -4,6 +4,8 @@
 name: Cypress test Front-end
 
 on:
+  push:
+    branches: [ "test" ]
   pull_request:
     branches: [ "main" ]
 
