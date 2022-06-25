@@ -22,8 +22,7 @@ This is the MVP project for Holberton. We are using Nuxt.js for the Front-End an
 This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3), Nuxt.js (^2.15.8).
 
 ## File Descriptions
-* `app` - Django app 
-* `DjangoAPI` - Django api
+* `back-end` - Back-end api
 * `front-end` - Front-end app
 * `landing-page` - Landing page of project
 
@@ -57,7 +56,9 @@ Final project MVP base created with Django
 ## Build Setup
 
 ### Install Django
-`$ python3 -m pip install Django`
+`$ pip install Django`
+`$ pip install djangorestframework`
+`$ pip install django-cors-headers`
 ### How to run server
 In the manage.py folder run <br>
 `$ python3 manage.py runserver`
@@ -75,6 +76,6 @@ localhost:8000/admin or http://127.0.0.1:8000/admin
 
 - Bruno	Rodriguez - Front-end - [Github](https://github.com/alexaorrico)
 - Matias	López - Project Management/Devops - [Github](https://github.com/Matilop15)
-- Angel	Piva - Project Management/Devops - [Github](https://github.com/AngelPiva)
-- Sahin	Meric - Project Management/Devops - [Github](https://github.com/sahinmeric)
+- Angel	Piva - Back-end - [Github](https://github.com/AngelPiva)
+- Sahin	Meric - Back-end - [Github](https://github.com/sahinmeric)
 
