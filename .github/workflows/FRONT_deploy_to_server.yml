@@ -1,9 +1,6 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+name: Front deploy CI
 
-name: Cypress test Front-end
-
-on:
+on: 
   pull_request:
     branches: [ "main" ]
 
@@ -25,11 +22,12 @@ jobs:
     - name: Run build task
       run: yarn run build --if-present
       working-directory: ./front-end
-    - name: Cypress.io
-      uses: cypress-io/github-action@v4.1.0
-      with:
-        working-directory: ./front-end
-        start: yarn start
-        browser: chrome
-
-    
+    - name: ssh deploy
+      uses: easingthemes/ssh-deploy@v2.2.11
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_SERVER_2 }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "front-end/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_SERVER_2 }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ./Ahorrapp/front-end

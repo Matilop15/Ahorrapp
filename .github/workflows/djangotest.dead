@@ -1,9 +1,10 @@
-name: Django back-end branch CI
+name: Django test and linting in dev branch CI
 
 on:
+  push:
+    branches: [ "dev" ]
   pull_request:
-    branches: [ "main" ]
-
+    branches: [ "dev" ]
 jobs:
   build:
 
