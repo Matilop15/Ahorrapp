@@ -48,7 +48,7 @@ jobs:
         python -m pip install django-cors-headers
         python -m pip install requests
     - name: Run server
-      run: python3 manage.py runserver
+      run: tmux new-session -d 'python3 manage.py runserver'
       working-directory: ./back-end
 
     # Run Tests ==================================
