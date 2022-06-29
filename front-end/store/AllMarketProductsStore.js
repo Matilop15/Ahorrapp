@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { useStorage } from '@vueuse/core';
-const baseURL = "http://127.0.0.1:8000/api";
+const baseURL = "https://www.ahorrapp.me/api";
 
 export const useAllMarketProductsStore = defineStore('AllMarketProductsStore', {
   state: () => {
