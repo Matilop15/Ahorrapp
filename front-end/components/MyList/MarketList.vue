@@ -1,7 +1,9 @@
 <template>
   <div class="marketlists">
-    <h1>{{getMarket(allMarkets, group[0].market_id)}}</h1>
-    <div v-for="item in group" :key="item.id">
+    <div class="super-img">
+      <img :src="getMarket(allMarkets, group[0].market_id).img_url" :alt="getMarket(allMarkets, group[0].market_id).name">
+    </div>
+    <div class="super-item" v-for="item in group" :key="item.id">
       <MyListMarketListItem :product='item' :amount='groupCount(item.product_id)'/>
     </div>
     <h2>Total: ${{total}}</h2>
@@ -22,7 +24,7 @@ export default {
   },
   methods: {
     getMarket: (market, id) => {
-      return market.filter((market) => market.id === id)[0].name
+      return market.filter((market) => market.id === id)[0]
     }
   }
 }
@@ -38,7 +40,19 @@ h2 {
 }
 
 .marketlists {
-  @apply w-80 border-2 m-1 rounded-xl border-red-100;
+  @apply flex flex-col items-center border-2 m-1 rounded-xl border-red-100;
+}
+
+.super-img {
+  @apply h-40 bg-white w-full rounded-xl flex justify-center items-center;
+}
+
+img {
+  @apply w-40 rounded-xl;
+}
+
+.super-item {
+  @apply w-full;
 }
 
 </style>

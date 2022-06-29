@@ -6,6 +6,7 @@
         <li><a :href="market.url">{{ market.url }}</a></li>
       </ul>
     </div>
+      <img :src="market.img_url" alt="">
   </article>
 </template>
 <script>
@@ -17,7 +18,7 @@ export default {
 
 <style scoped>
 article {
-  @apply flex justify-between h-36 m-3 p-3 bg-white rounded-xl shadow-md;
+  @apply flex justify-between items-center h-36 m-3 p-3 bg-white rounded-xl shadow-md;
 }
 
 h3 {
@@ -31,7 +32,8 @@ li {
 div {
   @apply p-2 ;
 }
+
 img {
-  @apply rounded-md;
+  @apply w-32 rounded-md;
 }
 </style>

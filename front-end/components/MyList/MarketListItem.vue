@@ -1,11 +1,10 @@
 <template>
-  <article v-if="product.price">
-    <img :src="getProductImg(allProducts, product.product_id)" :alt="product.name">
-    <ul>
-      <li class="productname">{{ getProductName(allProducts, product.product_id) }}</li>
-      <li>$ {{ product.price }} x {{amount}}</li>
-    </ul>
-  </article>
+  <NuxtLink :to="`/productos/${product.id}/`">
+    <article v-if="product.price">
+      <h1 class="productname">{{ getProductName(allProducts, product.product_id) }}</h1>
+      <p>$ {{ product.price }} x {{amount}}</p>
+    </article>
+  </NuxtLink>
 </template>
 <script>
 import { useProductsStore } from "../../store/ProductsStore";
@@ -30,15 +29,11 @@ export default {
 
 <style scoped>
 article {
-  @apply flex items-center h-2/4 m-3 p-3 bg-white rounded-md shadow-md;
+  @apply flex justify-between m-3 p-3 bg-white rounded-md shadow-md;
 }
 
-img {
-  @apply h-20 rounded-md;
-}
-
-ul {
-  @apply ml-3 flex-1 w-64 text-gray-500;
+p {
+  @apply ml-3 text-gray-500;
 }
 
 .productname {
