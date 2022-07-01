@@ -1,5 +1,7 @@
 # <img src="front-end/static/logo.png" width="40"> Ahorrapp
 
+HOST: www.ahorrapp.me
+
 
 ## Front-end Nuxtjs + Cypress Tests
 
