@@ -20,17 +20,20 @@ class Command(BaseCommand):
                     if resp.status_code == 200:
                         content = resp.text
                         soup = BeautifulSoup(content, 'lxml')
-                        box = soup.find('script', type="application/ld+json").get_text()
-                        box = eval(box)
-                        for key, value in box.items():
-                            if key == "offers":
-                                for key, val in value.items():
-                                    if key == 'price':
-                                        for i in range(len(val)):
-                                            if val[i] == ".":
-                                                new_price = val[:i]
-                                                break
-                        product.objects.filter(product_url=prod_url).update(price=new_price, update_date=timezone.now())
-                        print(f"{prod_url} --- > Price updated")
+                        if soup.find('script', type="application/ld+json").get_text():
+                            box = soup.find('script', type="application/ld+json").get_text()
+                            box = eval(box)
+                            for key, value in box.items():
+                                if key == "offers":
+                                    for key, val in value.items():
+                                        if key == 'price':
+                                            for i in range(len(val)):
+                                                if val[i] == ".":
+                                                    new_price = val[:i]
+                                                    break
+                            product.objects.filter(product_url=prod_url).update(price=new_price, update_date=timezone.now())
+                            print(f"{prod_url} --- > Price updated")
+                        else:
+                            print(f"{prod_url} ---> Price not found")
                     else:
                         print(f"{prod_url} ---> Page not found, price update skipped")

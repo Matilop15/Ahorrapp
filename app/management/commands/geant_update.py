@@ -18,12 +18,15 @@ class Command(BaseCommand):
                     if resp.status_code == 200:
                         content = resp.text
                         soup = BeautifulSoup(content, 'lxml')
-                        new_price = soup.find('label', class_='skuBestInstallmentValue').get_text()[3:]
-                        for i in range(len(new_price)):
-                            if new_price[i] == ',':
-                                new_price = new_price[:i]
-                                break
-                        product.objects.filter(product_url=prod_url).update(price=new_price, update_date=timezone.now())
-                        print(f"{prod_url} --- > Price updated")
+                        if soup.find('label', class_='skuBestInstallmentValue').get_text()[3:]:
+                            new_price = soup.find('label', class_='skuBestInstallmentValue').get_text()[3:]
+                            for i in range(len(new_price)):
+                                if new_price[i] == ',':
+                                    new_price = new_price[:i]
+                                    break
+                            product.objects.filter(product_url=prod_url).update(price=new_price, update_date=timezone.now())
+                            print(f"{prod_url} --- > Price updated")
+                        else:
+                            print(f"{prod_url} ---> Price not found")
                     else:
                         print(f"{prod_url} ---> Page not found, price update skipped")

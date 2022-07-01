@@ -18,14 +18,17 @@ class Command(BaseCommand):
                     if response.status_code == 200:
                         contents = response.text
                         soup = BeautifulSoup(contents, 'lxml')
-                        box = soup.find('div', itemtype='http://schema.org/Offer')
-                        price = str(box.findAll('meta')[1])
-                        new_price = price[15:18]
-                        for i in range(len(new_price)):
-                            if new_price[i] == ".":
-                                new_price = new_price[:i]
-                                break
-                        product.objects.filter(product_url=prod_url).update(price=new_price, update_date=timezone.now())
-                        print(f"{prod_url} --- > Price updated")
+                        if soup.find('div', itemtype='http://schema.org/Offer'):
+                            box = soup.find('div', itemtype='http://schema.org/Offer')
+                            price = str(box.findAll('meta')[1])
+                            new_price = price[15:18]
+                            for i in range(len(new_price)):
+                                if new_price[i] == ".":
+                                    new_price = new_price[:i]
+                                    break
+                            product.objects.filter(product_url=prod_url).update(price=new_price, update_date=timezone.now())
+                            print(f"{prod_url} --- > Price updated")
+                        else:
+                            print(f"{prod_url} ---> Price not found")
                     else:
                         print(f"{prod_url} ---> Page not found, price update skipped")
