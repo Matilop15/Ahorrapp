@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import { useStorage } from '@vueuse/core';
+const baseURL = "https://www.ahorrapp.me/api";
 
 export const useProductsStore = defineStore('ProductsStore', {
   state: () => {
@@ -20,7 +21,7 @@ export const useProductsStore = defineStore('ProductsStore', {
       if (this.allProducts) {
         try {
           this.allProducts = await fetch(
-            'https://www.ahorrapp.me/api/product_list/'
+            `${baseURL}/product_list/`
           ).then(response => response.json());
           this.filteredProducts = [
             ...this.allProducts.slice(0, this.filters.page * this.perPage)

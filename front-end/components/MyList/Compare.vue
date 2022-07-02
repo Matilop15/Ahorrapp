@@ -17,14 +17,6 @@ export default {
     ...mapState(useListStore, ['grouped', 'groupCount']),
     ...mapState(useAllMarketProductsStore, ['allMarketProducts'])
   },
-  mounted () {
-    const scrollContainer = document.querySelector("#compare-lists");
-
-    scrollContainer.addEventListener("wheel", (evt) => {
-        evt.preventDefault();
-        scrollContainer.scrollLeft += evt.deltaY;
-    });
-  },
   methods: {
     groupedItemsMarket: (allProducts, groupedItems) => {
       const listMarket = []
@@ -55,7 +47,7 @@ export default {
 
 <style scoped>
 #compare-lists {
-  @apply flex overflow-auto mt-4 mb-4;
+  @apply mt-4 mb-4;
 }
 
 </style>

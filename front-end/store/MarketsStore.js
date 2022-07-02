@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import { useStorage } from '@vueuse/core';
+const baseURL = "https://www.ahorrapp.me/api";
 
 export const useMarketsStore = defineStore('MarketsStore', {
   state: () => {
@@ -12,7 +13,7 @@ export const useMarketsStore = defineStore('MarketsStore', {
     async getallMarkets () {
       try {
         this.allMarkets = await fetch(
-          'https://www.ahorrapp.me/api/markets/'
+          `${baseURL}/markets/`
         ).then((response) => response.json());
       } catch (error) {
         console.log(error);

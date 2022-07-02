@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  chromeWebSecurity: false,
+  projectId: "862v9w",
   e2e: {
     baseUrl: 'http://localhost:3000'
   },
