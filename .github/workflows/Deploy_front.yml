@@ -1,0 +1,34 @@
+name: Front deploy CI
+
+on: 
+   push:
+     branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install Node.js
+      uses: actions/setup-node@v3.3.0
+      with:
+        node-version: '16.x'
+        cache-dependency-path: front-end/package.json
+        
+    - name: Install yarn dependencies
+      run: yarn install
+      working-directory: ./front-end
+       
+    - name: Run build task
+      run: yarn run build --if-present
+      working-directory: ./front-end
+    - name: ssh deploy
+      uses: easingthemes/ssh-deploy@v2.2.11
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_SERVER_2 }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "front-end/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_SERVER_2 }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ./Ahorrapp/front-end
