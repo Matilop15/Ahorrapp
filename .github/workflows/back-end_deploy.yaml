@@ -1,0 +1,24 @@
+name: deploy BACKend CI
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:  
+  build:
+   runs-on: ubuntu-20.04
+   
+   steps:
+     - uses: actions/checkout@v3
+    
+     - name: ssh deploy
+       uses: easingthemes/ssh-deploy@v2.2.11
+
+       env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_SERVER_2 }}
+          ARGS: "-rltgoDzvO"
+          SOURCE: "./back-end"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_SERVER_2 }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ./Ahorrapp/back-end
+          #EXCLUDE: "/DjangoA/, /app/"
