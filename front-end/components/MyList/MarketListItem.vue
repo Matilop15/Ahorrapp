@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/productos/${product.id}/`">
+  <NuxtLink :to="`/productos/${product.product_id}/`">
     <article v-if="product.price">
       <h1 class="productname">{{ getProductName(allProducts, product.product_id) }}</h1>
       <p>$ {{ product.price }} x {{amount}}</p>
