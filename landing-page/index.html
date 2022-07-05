@@ -2,34 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Ahorrapp landing page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Ahorrapp</title>
 </head>
 
-<body>
-    <header class="flex">
-        <div><img class="w-20" src="./assets/logo.png" alt="Ahorrapp logo"></div>
-        <div class="w-30">
-            <p>Ahorrapp</p>
-            <p><a href="#feature">feature</a></p>
-            <p><a href="#about">about</a></p>
+<body class="bg-red-50 text-red-300">
+  <header class="shadow-md w-full sticky top-0 bg-red-50">
+    <nav class="flex items-center relative">
+      <div class="flex items-center m-3 justify-between">
+        <img class="w-14" src="./assets/logo.png" alt="Ahorrapp logo">
+        <h1 id="logo" class="text-2xl leading-8 text-opacity-100  archive-font hidden sm:block">AHORRAPP</h1>
+      </div>
+      <div class="ml-4">
+        <a href="#feature" class="hover:text-red-400">Feature</a>
+        <a href="#about" class="ml-4 hover:text-red-400">About</a>
+      </div>
+      <a href="https://www.ahorrapp.me" class="absolute right-4" target="_blank">
+        <button class="bg-red-200 w-32 h-10 shadow-sm rounded-xl hover:bg-red-300 hover:text-white text-red-400">Go to app</button>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <section class="flex flex-col sm:flex-row items-center p-10 justify-around">
+      <div class="flex flex-col items-center">
+        <img class="w-48" src="./assets/logo.png" alt="Ahorrapp logo">
+        <h2 class="archive-font text-4xl text-center">COMPARE YOUR DAILY PURCHASES</h2>
+      </div>
+      <img id="banner" class="sm:max-w-xl" src="./assets/phones.png" alt="Banner Ahorrapp">
+    </section>
+
+    <section id="feature" class="flex flex-col-reverse sm:flex-row justify-around items-center md:m-24">
+        <div class="w-52 bg-no-repeat" style="height: 500px; background-image: url('./assets/backgraundmobile.png'); background-size: 100% auto;">
         </div>
-        <div class="absolute right-8 top-2">
-            <button><a href="https://www.ahorrapp.me" target="_blank">Go to app</a></button>
-        </div>
-    </header>
-    <main>
-        <section></section>
-        <section id="feature"></section>
-        <section id="about"></section>
-    </main>
-    <footer>
-        <p>Ahorrapp 2022 ©</p>
-    </footer>
+        <p class="top-2 w-96 text-2xl text-center">La aplicación es magica, en ella podes buscar los productos mas baratos en diferentes superercardos</p>
+    </section>
+
+    <section id="about" class="flex flex-col sm:flex-row space-x-2 font-semibold text-red-300 mt-10">
+      <div id="Mati" class="flex flex-col border rounded items-center">
+          <img src="./assets/matias.png" class="w-full" alt="Matias picture">
+          <h2 class="text-xl">Matias López</h2>
+          <p>Project Manager and DevOps</p>
+          <div class="flex space-x-2 justify-items-center">
+              <a href="https://www.github.com/matilop15" target="_blank">
+                  <img src="./assets/github.png" class="w-8" alt="Matias github">
+              </a>
+              <a href="https://www.linkedin.com/in/matiaas-lopez/" target="_blank">
+                  <img src="./assets/linkedin.png" class="w-8" alt="Matias linkedin">
+              </a>
+          </div>
+      </div>
+      <div id="Angel" class="flex flex-col border rounded items-center">
+          <img src="./assets/angel.png" alt="Angel picture">
+          <h2 class="text-xl">Angel Piva</h2>
+          <p>Back-end Developer</p>
+          <div class="flex space-x-2">
+              <a href="https://github.com/AngelPiva" target="_blank">
+                  <img src="./assets/github.png" class="w-8" alt="Angel github">
+              </a>
+              <a href="https://www.linkedin.com/in/angelpiva/" target="_blank">
+                  <img src="./assets/linkedin.png"  class="w-8" alt="Angel linkedin">
+              </a>
+          </div>
+      </div>
+      <div id="Bruno" class="flex flex-col border rounded items-center">
+          <img src="./assets/bruno.png" alt="Bruno picture">
+          <h2 class="text-xl">Bruno Rodríguez</h2>
+          <p>Front-end and UX/UI Designer</p>
+          <div class="flex space-x-2">
+              <a href="https://github.com/brunonra-dev" target="_blank">
+                  <img src="./assets/github.png" class="w-8" alt="Bruno github">
+              </a>
+              <a href="https://www.linkedin.com/in/brunonra/" target="_blank">
+                  <img src="./assets/linkedin.png" alt="Bruno linkedin" class="w-8">
+          </div>
+          </a>
+      </div>
+      <div id="Sahin" class="flex flex-col border rounded items-center">
+          <img src="./assets/sahin.png" alt="Sahin picture">
+          <h2 class="text-xl">Sahin Meric</h2>
+          <p>Back-end and data</p>
+          <div class="flex space-x-2">
+              <a href="https://github.com/sahinmeric" target="_blank">
+                  <img src="./assets/github.png" alt="Sahin github" class="w-8">
+              </a>
+              <a href="https://www.linkedin.com/in/sahinmeric/" target="_blank">
+                  <img src="./assets/linkedin.png" alt="Sahin linkedin" class="w-8">
+          </div>
+          </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Ahorrapp 2022 ©</p>
+  </footer>
 </body>
 
 </html>
