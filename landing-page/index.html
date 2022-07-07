@@ -12,8 +12,8 @@
   <title>Ahorrapp</title>
 </head>
 
-<body class="bg-red-50 text-red-300">
-  <header class="shadow-md w-full sticky top-0 bg-red-50">
+<body class="bg-red-50 text-red-300 max-w-6xl m-auto">
+  <header class=" w-full sticky top-0 bg-red-50">
     <nav class="flex items-center relative">
       <div class="flex items-center m-3 justify-between">
         <img class="w-14" src="./assets/logo.png" alt="Ahorrapp logo">
@@ -30,7 +30,7 @@
   </header>
   <main>
     <section class="flex flex-col sm:flex-row items-center p-10">
-      <div class="flex flex-col">
+      <div class="flex flex-col h-64">
         <div class="slideshow-container">
 
           <div class="mySlides">
@@ -56,7 +56,7 @@
         </div>
         <br>
       
-        <div style="text-align:center">
+        <div style="text-align:center" class="hidden">
           <span class="dot"></span> 
           <span class="dot"></span> 
           <span class="dot"></span> 
@@ -65,50 +65,42 @@
       <img id="banner" class="sm:max-w-xl" src="./assets/phones.png" alt="Banner Ahorrapp">
     </section>
 
-    <section id="feature" class="flex flex-col-reverse sm:flex-row justify-around items-center md:m-24 border rounded">
+    <section id="feature" class="flex flex-col-reverse sm:flex-row justify-around items-center">
       <div class="w-52 bg-no-repeat mt-5" style="height: 500px;background-size: 100% auto;">
         <img src="./assets/searchprod.gif" alt="Search produc Gif">
-        </div>     
-        <p class="top-2 w-96 text-2xl text-center">You can search for a product and see the price in differents markets</p>
-      </section>
-      <section class="flex flex-col-reverse sm:flex-row justify-around items-center md:m-24 border rounded">
-        <p class="top-2 w-96 text-2xl text-center ">You can select and create a list of shopping to compare the price between the diferent supermarkets</p>
-        <div class="w-52 bg-no-repeat mt-5" style="height: 500px;background-size: 100% auto;">
-          <img src="./assets/addprod.gif" alt="Add product Gif">
-       </div>
-       </section>
-       <section class="flex flex-col-reverse sm:flex-row justify-around items-center md:m-24 border rounded">
-        <div class="w-52 bg-no-repeat mt-5" style="height: 500px;background-size: 100% auto;">
-          <img src="./assets/install.gif" alt="Install app Gif">
-       </div>
-       <p class="top-2 w-96 text-2xl text-center">You can install the application on your mobile using chrome browser</p>
-       </section>
-       <section class="flex flex-col-reverse sm:flex-row justify-around items-center md:m-24 border rounded">
-        <h2 class="text-4xl text-center">For Front-end we using:</h2>
-          <img src="https://www.pngkey.com/png/full/156-1566256_unit-testing-vue-class-components-using-typescript-vue.png" alt="Vuejs logo" class="w-16">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nuxt_logo.svg/2560px-Nuxt_logo.svg.png" alt="Nuxtjs logo" class="w-16">
-          <img src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png" alt="Tailwind logo" class="w-16">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/PWA_logo.svg/1280px-PWA_logo.svg.png" alt="PWA logo" class="w-16">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Cypress.png" alt="Cypress logo" class="w-16">
-        </section>
-      <section class="flex flex-col-reverse sm:flex-row justify-around items-center md:m-24 border rounded">
-        <h2 class="text-4xl text-center">For Back-end we using:</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" alt="Python logo" class="w-16">
-        <img src="https://cdn.freebiesupply.com/logos/large/2x/django-community-logo-png-transparent.png" alt="Django logo" class="w-16">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/1280px-SQLite370.svg.png" alt="SQLite logo" class="w-20">
-        <img src="./assets/beautiful2.png" alt="Beautifulsoup logo" class="w-24">
-      </section>
-      <section class="flex flex-col-reverse sm:flex-row justify-around items-center md:m-24 border rounded">
-        <h2 class="text-4xl text-center">For DevOps we using:</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gnu-bash-logo.svg/1200px-Gnu-bash-logo.svg.png" alt="Bash logo" class="w-20">
-        <img src="https://avatars.githubusercontent.com/u/44036562?s=280&v=4" alt="Github Actions logo" class="w-16">
-        <img src="https://dwglogo.com/wp-content/uploads/2017/09/3630px-Nginx_logo.png" alt="Nginx logo" class="w-28">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png" alt="Ubuntu server logo" class="w-14">
-      </section>
+      </div>     
+      <p class="top-2 w-96 text-2xl text-center">You can search for a product and see the price in differents markets</p>
+    </section>
+    <section class="flex flex-col sm:flex-row justify-around items-center">
+      <p class="top-2 w-96 text-2xl text-center ">You can select and create a list of shopping to compare the price between the diferent supermarkets</p>
+      <div class="w-52 bg-no-repeat mt-5" style="height: 500px;background-size: 100% auto;">
+        <img src="./assets/addprod.gif" alt="Add product Gif">
+      </div>
+    </section>
+    <section class="flex flex-col-reverse sm:flex-row justify-around items-center">
+      <div class="w-52 bg-no-repeat mt-5" style="height: 500px;background-size: 100% auto;">
+        <img src="./assets/install.gif" alt="Install app Gif">
+      </div>
+      <p class="top-2 w-96 text-2xl text-center">You can install the application on your mobile using chrome browser</p>
+    </section>
+    <section class="flex flex-wrap justify-around items-center grayscale opacity-75 m-10 sm:m-0">
+      <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/vuejs_original_logo_icon_146304.png" alt="Vuejs logo" class="w-16 m-6">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nuxt_logo.svg/2560px-Nuxt_logo.svg.png" alt="Nuxtjs logo" class="w-16 m-6">
+      <img src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png" alt="Tailwind logo" class="w-16 m-6">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/PWA_logo.svg/1280px-PWA_logo.svg.png" alt="PWA logo" class="w-16 m-6">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Cypress.png" alt="Cypress logo" class="w-16 m-6">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" alt="Python logo" class="w-16 m-6">
+      <img src="https://cdn.freebiesupply.com/logos/large/2x/django-community-logo-png-transparent.png" alt="Django logo" class="w-16 m-6">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/1280px-SQLite370.svg.png" alt="SQLite logo" class="w-20 m-6">
+      <img src="./assets/beautiful2.png" alt="Beautifulsoup logo" class="w-24 m-6">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gnu-bash-logo.svg/1200px-Gnu-bash-logo.svg.png" alt="Bash logo" class="w-20 m-6">
+      <img src="https://avatars.githubusercontent.com/u/44036562?s=280&v=4" alt="Github Actions logo" class="w-16 m-6">
+      <img src="https://dwglogo.com/wp-content/uploads/2017/09/3630px-Nginx_logo.png" alt="Nginx logo" class="w-28 m-6">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png" alt="Ubuntu server logo" class="w-14 m-6">
+    </section>
 
-
-    <section id="about" class="flex flex-col sm:flex-row space-x-2 font-semibold text-red-300 mt-10">
-      <div id="Mati" class="flex flex-col border rounded items-center">
+    <section id="about" class="flex flex-col sm:flex-row max-w-xs m-auto sm:max-w-none space-x-2 font-semibold text-red-300 mt-20 mb-10">
+      <div id="Mati" class="flex flex-col items-center mb-10">
           <img src="./assets/matias.png" class="w-full" alt="Matias picture">
           <h2 class="text-xl">Matias López</h2>
           <p>Project Manager and DevOps</p>
@@ -121,7 +113,7 @@
               </a>
           </div>
       </div>
-      <div id="Angel" class="flex flex-col border rounded items-center">
+      <div id="Angel" class="flex flex-col items-center mb-10">
           <img src="./assets/angel.png" alt="Angel picture">
           <h2 class="text-xl">Angel Piva</h2>
           <p>Back-end Developer</p>
@@ -134,7 +126,7 @@
               </a>
           </div>
       </div>
-      <div id="Bruno" class="flex flex-col border rounded items-center">
+      <div id="Bruno" class="flex flex-col items-center mb-10">
           <img src="./assets/bruno.png" alt="Bruno picture">
           <h2 class="text-xl">Bruno Rodríguez</h2>
           <p>Front-end and UX/UI Designer</p>
@@ -147,7 +139,7 @@
           </div>
           </a>
       </div>
-      <div id="Sahin" class="flex flex-col border rounded items-center">
+      <div id="Sahin" class="flex flex-col items-center mb-10">
           <img src="./assets/sahin.png" alt="Sahin picture">
           <h2 class="text-xl">Sahin Meric</h2>
           <p>Back-end and data</p>
@@ -162,7 +154,7 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="text-right">
     <p>Ahorrapp 2022 ©</p>
   </footer>
   <script>
@@ -183,7 +175,7 @@
       }
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
+      setTimeout(showSlides, 2700); // Change image every 2 seconds
     }
   </script>
 </body>
