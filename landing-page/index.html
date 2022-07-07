@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./carrousel/carrousel.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Ahorrapp</title>
 </head>
@@ -28,10 +29,38 @@
     </nav>
   </header>
   <main>
-    <section class="flex flex-col sm:flex-row items-center p-10 justify-around">
-      <div class="flex flex-col items-center">
-        <img class="w-48" src="./assets/logo.png" alt="Ahorrapp logo">
-        <h2 class="archive-font text-4xl text-center">COMPARE YOUR DAILY PURCHASES</h2>
+    <section class="flex flex-col sm:flex-row items-center p-10">
+      <div class="flex flex-col">
+        <div class="slideshow-container">
+
+          <div class="mySlides">
+            <div class="flex align-middle items-center text-2xl text-center">
+              <img src="./carrousel/lowprice.png" style="width:50%">
+              <h2 style="width: 50%;">Easily find the cheapest prices</h2>
+            </div>
+          </div>
+      
+          <div class="mySlides">
+            <div class="flex items-center text-2xl text-center">
+              <img src="./carrousel/compareprice.png" style="width:50%">
+              <h2 style="width: 50%">your daily purchase in other supermarkets</h2>
+            </div>
+          </div>
+      
+          <div class="mySlides">
+            <div class="flex items-center text-2xl text-center">
+              <img src="./carrousel/updateprice.png" style="width:50%">
+              <h2 style="width: 50%;">updated prices</h2>
+            </div>
+          </div>
+        </div>
+        <br>
+      
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
       </div>
       <img id="banner" class="sm:max-w-xl" src="./assets/phones.png" alt="Banner Ahorrapp">
     </section>
@@ -136,6 +165,27 @@
   <footer>
     <p>Ahorrapp 2022 ©</p>
   </footer>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
 </body>
 
 </html>
