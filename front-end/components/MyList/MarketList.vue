@@ -36,7 +36,7 @@ h1 {
 }
 
 h2 {
-  @apply text-center p-3 text-gray-700 font-bold text-xl;
+  @apply text-center p-3 text-gray-700 font-bold text-xl md:text-3xl;
 }
 
 .marketlists {
