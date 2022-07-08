@@ -76,7 +76,7 @@ localhost:8000/admin or http://127.0.0.1:8000/admin
 
 ## Authors
 
-- Bruno	Rodriguez - Front-end - [Github](https://github.com/alexaorrico)
+- Bruno	Rodriguez - Front-end - [Github](https://github.com/brunora-dev)
 - Matias	López - Project Management/Devops - [Github](https://github.com/Matilop15)
 - Angel	Piva - Back-end - [Github](https://github.com/AngelPiva)
 - Sahin	Meric - Back-end - [Github](https://github.com/sahinmeric)
