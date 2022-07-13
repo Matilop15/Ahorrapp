@@ -37,16 +37,14 @@ class Command(BaseCommand):
                                             for i in range(len(new_price)):
                                                 if new_price[i] == ",":
                                                     new_price = new_price[:i]
-                                                    hola = new_price.replace('.', '')
-                                                    hola = int(hola)
-                                                    if hola > 10000:
-                                                        break
-                                                    else:
-                                                        break
-                                            break
+                                                    break
+                            try:
+                                new_price = int(new_price)
+                            except ValueError:
+                                print(f"{prod_url} --- > Out of stock")
+                                break
                             product.objects.filter(product_url=prod_url).update(price=new_price, update_date=timezone.now())
-                            print(new_price)
-                            print(f"{prod_url} --- > Price updated")
+                            print(f"{prod_url}--> {new_price} --- > Price updated")
                         else:
                             print(f"{prod_url} ---> Price not found")
                     else:
